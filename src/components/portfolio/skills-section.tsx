@@ -4,44 +4,34 @@ import { Code, Database, Globe, Smartphone } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Frontend",
-    icon: Globe,
-    skills: [
-      { name: "React/Next.js", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "Vue.js", level: 75 }
-    ]
-  },
-  {
-    title: "Backend",
-    icon: Database,
-    skills: [
-      { name: "Node.js", level: 88 },
-      { name: "Python", level: 82 },
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 80 }
-    ]
-  },
-  {
-    title: "Tools & DevOps",
+    title: "Languages",
     icon: Code,
-    skills: [
-      { name: "Git/GitHub", level: 92 },
-      { name: "Docker", level: 78 },
-      { name: "AWS", level: 75 },
-      { name: "CI/CD", level: 80 }
-    ]
+    skills: ["JavaScript", "TypeScript", "Python", "SQL"]
   },
   {
-    title: "Mobile",
+    title: "Backend & APIs",
+    icon: Database,
+    skills: ["Node.js", "Django", "FastAPI", "RESTful APIs"]
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+  },
+  {
+    title: "Cloud Platforms",
+    icon: Globe,
+    skills: ["AWS", "Google Cloud", "Microsoft Azure", "Multi-cloud"]
+  },
+  {
+    title: "DevOps & Tools",
+    icon: Code,
+    skills: ["Docker", "Kubernetes", "CI/CD", "Infrastructure as Code"]
+  },
+  {
+    title: "Specializations",
     icon: Smartphone,
-    skills: [
-      { name: "React Native", level: 85 },
-      { name: "Flutter", level: 70 },
-      { name: "PWA", level: 88 },
-      { name: "Responsive Design", level: 95 }
-    ]
+    skills: ["Cloud Architecture", "Microservices", "System Design", "MLOps"]
   }
 ]
 
@@ -58,7 +48,7 @@ export function SkillsSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <Card key={category.title} className="project-card hover-lift" 
                   style={{animationDelay: `${index * 0.1}s`}}>
@@ -68,40 +58,59 @@ export function SkillsSection() {
                 </div>
                 <CardTitle className="text-xl">{category.title}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium">{skill.name}</span>
-                      <Badge variant="secondary" className="text-xs">
-                        {skill.level}%
-                      </Badge>
-                    </div>
-                    <div className="skill-progress">
-                      <div 
-                        className="skill-progress-fill"
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <Badge key={skill} variant="outline" className="hover-lift">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold mb-8">Technologies I Work With</h3>
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+        {/* Certifications Section */}
+        <div className="mt-20">
+          <h3 className="text-2xl font-semibold mb-8 text-center">Professional Certifications</h3>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
-              "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Node.js",
-              "Python", "Django", "FastAPI", "PostgreSQL", "MongoDB", "Redis",
-              "Docker", "AWS", "Vercel", "Netlify", "Git", "Linux", "Figma", "Tailwind CSS"
-            ].map((tech, index) => (
-              <Badge key={tech} variant="outline" className="hover-lift text-sm py-2 px-4"
-                     style={{animationDelay: `${index * 0.05}s`}}>
-                {tech}
-              </Badge>
+              {
+                name: "AWS Certified Cloud Practitioner",
+                issuer: "Amazon Web Services",
+                link: "https://credly.com/badges/your-badge-id-1"
+              },
+              {
+                name: "AWS Certified Solutions Architect - Associate",
+                issuer: "Amazon Web Services", 
+                link: "https://credly.com/badges/your-badge-id-2"
+              },
+              {
+                name: "Google Cloud Professional Machine Learning Engineer",
+                issuer: "Google Cloud",
+                link: "https://credly.com/badges/your-badge-id-3"
+              },
+              {
+                name: "Kubernetes and Cloud Native Associate",
+                issuer: "CNCF",
+                link: "https://credly.com/badges/your-badge-id-4"
+              }
+            ].map((cert, index) => (
+              <Card key={cert.name} className="project-card hover-lift">
+                <CardContent className="p-6">
+                  <h4 className="font-semibold mb-2">{cert.name}</h4>
+                  <p className="text-sm text-muted-foreground mb-4">{cert.issuer}</p>
+                  <a 
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm"
+                  >
+                    View Certificate →
+                  </a>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
