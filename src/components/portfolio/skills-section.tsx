@@ -92,7 +92,7 @@ export function SkillsSection() {
                 name: "Google Cloud Professional Machine Learning Engineer",
                 issuer: "Google Cloud",
                 link: "https://credly.com/badges/your-badge-id-3",
-                image: "https://images.credly.com/size/220x220/images/1c2c86e1-16ce-4e4d-a425-d1ac96bb026d/image.png"
+                image: "https://images.credly.com/size/220x220/images/61b30b43-c2c4-498c-b68d-4fa8e39b5e34/image.png"
               },
               {
                 name: "Kubernetes and Cloud Native Associate",
