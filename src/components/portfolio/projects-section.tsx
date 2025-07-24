@@ -123,8 +123,8 @@ export function ProjectsSection() {
         {/* Other Projects */}
         <div>
           <h3 className="text-2xl font-semibold mb-8 text-center">Other Notable Projects</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherProjects.map((project, index) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {otherProjects.slice(0, 3).map((project, index) => (
               <Card key={project.title} className="project-card hover-lift"
                     style={{animationDelay: `${(index + 2) * 0.1}s`}}>
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary-glow/10 flex items-center justify-center">

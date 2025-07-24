@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="font-bold text-xl hero-text-gradient">
-              Ashenafi.dev
+              Ashenafi.tech
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Full-stack developer passionate about creating beautiful, 
@@ -25,7 +25,7 @@ export function Footer() {
                  className="text-muted-foreground hover:text-primary transition-colors hover-lift">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="mailto:hello@ashenafi.dev"
+              <a href="mailto:hello@ashenafi.tech"
                  className="text-muted-foreground hover:text-primary transition-colors hover-lift">
                 <Mail className="h-5 w-5" />
               </a>
@@ -36,7 +36,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Quick Links</h3>
             <div className="flex flex-col space-y-2">
-              {["About", "Skills", "Projects", "Contact"].map((item) => (
+              {["About", "Skills", "Projects", "Blogs", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => {
