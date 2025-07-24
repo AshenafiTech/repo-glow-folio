@@ -11,22 +11,22 @@ const skillCategories = [
   {
     title: "Backend & APIs",
     icon: Database,
-    skills: ["Node.js", "Django", "FastAPI", "RESTful APIs"]
+    skills: ["Node.js", "Django", "FastAPI", "GraphQL"]
   },
   {
     title: "Databases",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "RDS"]
   },
   {
     title: "Cloud Platforms",
     icon: Globe,
-    skills: ["AWS", "Google Cloud", "Microsoft Azure", "Multi-cloud"]
+    skills: ["AWS", "Google Cloud", "Microsoft Azure"]
   },
   {
     title: "DevOps & Tools",
     icon: Code,
-    skills: ["Docker", "Kubernetes", "CI/CD", "Infrastructure as Code"]
+    skills: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD"]
   },
   {
     title: "Specializations",
@@ -79,26 +79,37 @@ export function SkillsSection() {
               {
                 name: "AWS Certified Cloud Practitioner",
                 issuer: "Amazon Web Services",
-                link: "https://credly.com/badges/your-badge-id-1"
+                link: "https://credly.com/badges/your-badge-id-1",
+                image: "https://images.credly.com/size/220x220/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
               },
               {
                 name: "AWS Certified Solutions Architect - Associate",
                 issuer: "Amazon Web Services", 
-                link: "https://credly.com/badges/your-badge-id-2"
+                link: "https://credly.com/badges/your-badge-id-2",
+                image: "https://images.credly.com/size/220x220/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
               },
               {
                 name: "Google Cloud Professional Machine Learning Engineer",
                 issuer: "Google Cloud",
-                link: "https://credly.com/badges/your-badge-id-3"
+                link: "https://credly.com/badges/your-badge-id-3",
+                image: "https://images.credly.com/size/220x220/images/1c2c86e1-16ce-4e4d-a425-d1ac96bb026d/image.png"
               },
               {
                 name: "Kubernetes and Cloud Native Associate",
                 issuer: "CNCF",
-                link: "https://credly.com/badges/your-badge-id-4"
+                link: "https://credly.com/badges/your-badge-id-4",
+                image: "https://images.credly.com/size/220x220/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png"
               }
             ].map((cert, index) => (
               <Card key={cert.name} className="project-card hover-lift">
-                <CardContent className="p-6">
+                <CardContent className="p-6 text-center">
+                  <div className="mb-4">
+                    <img 
+                      src={cert.image} 
+                      alt={cert.name}
+                      className="w-20 h-20 mx-auto mb-4"
+                    />
+                  </div>
                   <h4 className="font-semibold mb-2">{cert.name}</h4>
                   <p className="text-sm text-muted-foreground mb-4">{cert.issuer}</p>
                   <a 

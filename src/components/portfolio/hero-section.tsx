@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
@@ -14,31 +14,35 @@ export function HeroSection() {
       
       <div className="container px-4 text-center relative z-10">
         <div className="animate-fade-in">
-          <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
-                alt="Ashenafi - Software Engineer"
-                className="w-full h-full object-cover"
-              />
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                Hi, I'm{" "}
+                <span className="hero-text-gradient animate-glow">
+                  Ashenafi
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+                Software Engineer & Cloud Solutions Architect
+              </p>
+              
+              <p className="text-lg text-muted-foreground mb-12">
+                Specializing in scalable cloud infrastructure and full-stack development. 
+                Expert in AWS, GCP, Azure with extensive experience in containerization and DevOps practices.
+              </p>
+            </div>
+            
+            <div className="flex justify-center md:justify-end">
+              <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 hover-lift">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                  alt="Ashenafi - Software Engineer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
-
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm{" "}
-            <span className="hero-text-gradient animate-glow">
-              Ashenafi
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Software Engineer & Cloud Solutions Architect
-          </p>
-          
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Specializing in scalable cloud infrastructure and full-stack development. 
-            Expert in AWS, GCP, Azure with extensive experience in containerization and DevOps practices.
-          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button size="lg" className="hover-lift hover-glow">
@@ -59,6 +63,10 @@ export function HeroSection() {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
                className="text-muted-foreground hover:text-primary transition-colors hover-lift">
               <Linkedin className="h-6 w-6" />
+            </a>
+            <a href="https://credly.com/users/your-profile" target="_blank" rel="noopener noreferrer"
+               className="text-muted-foreground hover:text-primary transition-colors hover-lift">
+              <Award className="h-6 w-6" />
             </a>
             <a href="mailto:hello@example.com"
                className="text-muted-foreground hover:text-primary transition-colors hover-lift">

@@ -14,7 +14,7 @@ export function AboutSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto">
           <div className="space-y-6">
             <div className="animate-fade-in">
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
@@ -30,7 +30,7 @@ export function AboutSection() {
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center">
               {[
                 "Cloud Architecture", "System Design", "DevOps", 
                 "Microservices", "Infrastructure as Code", "CI/CD", "Agile Development"
@@ -41,29 +41,6 @@ export function AboutSection() {
               ))}
             </div>
           </div>
-          
-          <Card className="project-card hover-lift">
-            <CardContent className="p-8">
-              <div className="grid grid-cols-2 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">3+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">20+</div>
-                  <div className="text-sm text-muted-foreground">Happy Clients</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-sm text-muted-foreground">Dedication</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
