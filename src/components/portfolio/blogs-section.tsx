@@ -55,7 +55,7 @@ export function BlogsSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog, index) => (
             <Card key={blog.title} className="project-card hover-lift overflow-hidden group"
                   style={{animationDelay: `${index * 0.1}s`}}>

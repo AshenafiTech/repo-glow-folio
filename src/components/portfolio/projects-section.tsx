@@ -77,7 +77,7 @@ export function ProjectsSection() {
         </div>
         
         {/* Featured Projects */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {featuredProjects.map((project, index) => (
             <Card key={project.title} className="project-card hover-lift overflow-hidden"
                   style={{animationDelay: `${index * 0.2}s`}}>
