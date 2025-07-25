@@ -37,31 +37,29 @@ const skillCategories = [
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-12">
       <div className="container px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 hero-text-gradient">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 hero-text-gradient">
             Skills & Technologies
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A comprehensive toolkit for building modern digital solutions
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
           {skillCategories.map((category, index) => (
             <Card key={category.title} className="project-card hover-lift" 
                   style={{animationDelay: `${index * 0.1}s`}}>
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
-                  <category.icon className="h-8 w-8 text-primary" />
+              <CardContent className="p-4 text-center">
+                <div className="mx-auto mb-3 p-2 bg-primary/10 rounded-full w-fit">
+                  <category.icon className="h-5 w-5 text-primary" />
                 </div>
-                <CardTitle className="text-xl">{category.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="font-semibold text-sm mb-3">{category.title}</h3>
+                <div className="flex flex-wrap gap-1">
                   {category.skills.map((skill) => (
-                    <Badge key={skill} variant="outline" className="hover-lift">
+                    <Badge key={skill} variant="outline" className="text-xs">
                       {skill}
                     </Badge>
                   ))}
@@ -72,9 +70,9 @@ export function SkillsSection() {
         </div>
         
         {/* Certifications Section */}
-        <div className="mt-20">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Professional Certifications</h3>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="mt-12">
+          <h3 className="text-xl font-semibold mb-6 text-center">Professional Certifications</h3>
+          <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {[
               {
                 name: "AWS Certified Cloud Practitioner",
@@ -102,21 +100,21 @@ export function SkillsSection() {
               }
             ].map((cert, index) => (
               <Card key={cert.name} className="project-card hover-lift">
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4">
+                <CardContent className="p-4 text-center">
+                  <div className="mb-3">
                     <img 
                       src={cert.image} 
                       alt={cert.name}
-                      className="w-20 h-20 mx-auto mb-4"
+                      className="w-16 h-16 mx-auto mb-3"
                     />
                   </div>
-                  <h4 className="font-semibold mb-2">{cert.name}</h4>
-                  <p className="text-sm text-muted-foreground mb-4">{cert.issuer}</p>
+                  <h4 className="font-medium text-sm mb-1">{cert.name}</h4>
+                  <p className="text-xs text-muted-foreground mb-3">{cert.issuer}</p>
                   <a 
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline text-sm"
+                    className="text-primary hover:underline text-xs"
                   >
                     View Certificate →
                   </a>
