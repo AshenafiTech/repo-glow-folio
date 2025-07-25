@@ -33,12 +33,12 @@ export function HeroSection() {
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                Software Engineer & Cloud Solutions Architect
+                Freelance Software Engineer & Cloud Solutions Architect
               </p>
               
               <p className="text-lg text-muted-foreground mb-12">
-                Specializing in scalable cloud infrastructure and full-stack development. 
-                Expert in AWS, GCP, Azure with extensive experience in containerization and DevOps practices.
+                I help businesses build scalable web applications and cloud infrastructure. 
+                Specializing in modern web technologies and cloud platforms like AWS, GCP, and Azure.
               </p>
             </div>
             

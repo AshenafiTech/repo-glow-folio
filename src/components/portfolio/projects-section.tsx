@@ -29,7 +29,7 @@ const projects = [
     tags: ["Vue.js", "Python", "FastAPI", "Chart.js", "Docker"],
     github: "https://github.com",
     demo: "https://demo.com",
-    featured: false
+    featured: true
   },
   {
     title: "Social Media Mobile App",
