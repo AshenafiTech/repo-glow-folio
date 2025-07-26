@@ -24,16 +24,16 @@ export function HeroSection() {
       <div className="container px-4 text-center relative z-10">
         <div className="animate-fade-in">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <div className="space-y-6 text-left md:text-left">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                 Hi, I'm{" "}
                 <span className="hero-text-gradient animate-glow">
                   Ashenafi
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                Freelance Software Engineer & Cloud Solutions Architect
+              <p className="text-2xl md:text-3xl text-muted-foreground mb-8 font-medium">
+                Software Engineer & Cloud Solutions Architect
               </p>
               
               <p className="text-lg text-muted-foreground mb-12">
