@@ -50,7 +50,7 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors hover-lift"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 {item.name}
               </button>
