@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient with enhanced effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-primary-glow/15"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
