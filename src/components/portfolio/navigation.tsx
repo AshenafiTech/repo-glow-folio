@@ -60,7 +60,18 @@ export function Navigation() {
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <Button variant="outline" size="sm" className="hidden sm:flex hover-lift">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="hidden sm:flex hover-lift"
+              onClick={() => {
+                // Create a downloadable resume link
+                const link = document.createElement('a')
+                link.href = '/resume.pdf' // You'll need to add this file to the public folder
+                link.download = 'Ashenafi_Resume.pdf'
+                link.click()
+              }}
+            >
               <Download className="mr-2 h-4 w-4" />
               Resume
             </Button>
@@ -90,7 +101,17 @@ export function Navigation() {
                   {item.name}
                 </button>
               ))}
-              <Button variant="outline" size="sm" className="w-fit mt-4">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="w-fit mt-4"
+                onClick={() => {
+                  const link = document.createElement('a')
+                  link.href = '/resume.pdf'
+                  link.download = 'Ashenafi_Resume.pdf'
+                  link.click()
+                }}
+              >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>

@@ -25,11 +25,30 @@ export function HeroSection() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base px-8 py-6">
+                <Button 
+                  size="lg" 
+                  className="text-base px-8 py-6"
+                  onClick={() => {
+                    const aboutSection = document.querySelector('#about')
+                    if (aboutSection) {
+                      aboutSection.scrollIntoView({ behavior: "smooth" })
+                    }
+                  }}
+                >
                   <ArrowDown className="mr-2 h-4 w-4" />
                   Know more
                 </Button>
-                <Button variant="outline" size="lg" className="text-base px-8 py-6">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="text-base px-8 py-6"
+                  onClick={() => {
+                    const contactSection = document.querySelector('#contact')
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: "smooth" })
+                    }
+                  }}
+                >
                   Get in touch
                 </Button>
               </div>
