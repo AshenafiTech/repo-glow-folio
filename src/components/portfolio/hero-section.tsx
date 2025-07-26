@@ -1,100 +1,84 @@
-import { ArrowDown, Github, Linkedin, Mail, Award } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section className="h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient with enhanced effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-primary-glow/15"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
-      
-      {/* Enhanced floating elements */}
-      <div className="absolute top-20 left-10 w-24 h-24 bg-primary/15 rounded-full animate-float blur-sm"></div>
-      <div className="absolute bottom-20 right-10 w-20 h-20 bg-primary-glow/15 rounded-full animate-float blur-sm" style={{animationDelay: '1s'}}></div>
-      <div className="absolute top-1/2 left-20 w-16 h-16 bg-accent/15 rounded-full animate-float blur-sm" style={{animationDelay: '2s'}}></div>
-      <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-primary/10 rounded-full animate-float blur-sm" style={{animationDelay: '0.5s'}}></div>
-      
-      {/* Code pattern background */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-1/4 text-primary font-mono text-sm animate-pulse">{"{ code: 'passion' }"}</div>
-        <div className="absolute bottom-32 right-1/3 text-primary-glow font-mono text-sm animate-pulse" style={{animationDelay: '1s'}}>{"< innovation />"}</div>
-        <div className="absolute top-1/2 left-10 text-accent font-mono text-sm animate-pulse" style={{animationDelay: '2s'}}>{"// building future"}</div>
-      </div>
-      
-      <div className="container px-4 text-center relative z-10">
-        <div className="animate-fade-in">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div className="space-y-6 text-left md:text-left">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                Hi, I'm{" "}
-                <span className="hero-text-gradient animate-glow">
-                  Ashenafi
-                </span>
-              </h1>
+    <section className="min-h-screen flex items-center justify-center bg-background py-20">
+      <div className="container px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+                  Building scalable solutions and helping businesses grow.
+                </h1>
+                
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+                  Ashenafi is a Software Engineer at Microsoft, where he focuses on cloud-native 
+                  technologies and AI, helping companies modernize their infrastructure and adopt 
+                  innovative solutions. He is also the founder of DevCommunity, a community initiative 
+                  where he mentors individuals in tech. His educational content on YouTube has been 
+                  watched by millions. A passionate advocate for open source, Ashenafi regularly speaks 
+                  at industry conferences on cloud, AI, and developer growth.
+                </p>
+              </div>
               
-              <p className="text-2xl md:text-3xl text-muted-foreground mb-8 font-medium">
-                Software Engineer & Cloud Solutions Architect
-              </p>
-              
-              <p className="text-lg text-muted-foreground mb-12">
-                I help businesses build scalable web applications and cloud infrastructure. 
-                Specializing in modern web technologies and cloud platforms like AWS, GCP, and Azure.
-              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="text-base px-8 py-6">
+                  <ArrowDown className="mr-2 h-4 w-4" />
+                  Know more
+                </Button>
+                <Button variant="outline" size="lg" className="text-base px-8 py-6">
+                  Get in touch
+                </Button>
+              </div>
             </div>
             
-            <div className="flex justify-center md:justify-end">
+            {/* Right Content - Professional Photo */}
+            <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/30 hover-lift relative z-10 bg-gradient-to-br from-primary/20 to-primary-glow/20">
+                <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-muted">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=face" 
                     alt="Ashenafi - Software Engineer"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                {/* Glowing ring effect */}
-                <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse"></div>
-                <div className="absolute -inset-2 rounded-full border border-primary-glow/10 animate-pulse" style={{animationDelay: '0.5s'}}></div>
               </div>
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 mt-8">
-            <Button size="lg" className="hover-lift hover-glow group">
-              <Mail className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-              Get In Touch
-            </Button>
-            <Button variant="outline" size="lg" className="hover-lift group">
-              <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-              View My Work
-            </Button>
+          {/* Four Key Points Grid */}
+          <div className="mt-24 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold text-foreground">Software Engineer</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Has built scalable applications for millions of users, sharing expertise in modern development practices.
+              </p>
+            </div>
+            
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold text-foreground">Cloud consultant</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Provides insightful consultancy to companies embarking on their cloud transformation journeys.
+              </p>
+            </div>
+            
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold text-foreground">Community leader & speaker</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Renowned for exceptional community leadership and engaging as a speaker at global tech conferences.
+              </p>
+            </div>
+            
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold text-foreground">Empathy and professionalism</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Known for a unique blend of empathetic understanding and professional acumen in approach to work and life.
+              </p>
+            </div>
           </div>
-          
-          <div className="flex justify-center space-x-8">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-               className="text-muted-foreground hover:text-primary transition-all duration-300 hover-lift hover:scale-110 group">
-              <Github className="h-7 w-7 group-hover:rotate-12 transition-transform" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-               className="text-muted-foreground hover:text-primary transition-all duration-300 hover-lift hover:scale-110 group">
-              <Linkedin className="h-7 w-7 group-hover:rotate-12 transition-transform" />
-            </a>
-            <a href="https://credly.com/users/your-profile" target="_blank" rel="noopener noreferrer"
-               className="text-muted-foreground hover:text-primary transition-all duration-300 hover-lift hover:scale-110 group">
-              <Award className="h-7 w-7 group-hover:rotate-12 transition-transform" />
-            </a>
-            <a href="mailto:hello@example.com"
-               className="text-muted-foreground hover:text-primary transition-all duration-300 hover-lift hover:scale-110 group">
-              <Mail className="h-7 w-7 group-hover:rotate-12 transition-transform" />
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      {/* Enhanced scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center space-y-2">
-          <span className="text-xs text-muted-foreground font-medium">Scroll to explore</span>
-          <ArrowDown className="h-6 w-6 text-primary animate-pulse" />
         </div>
       </div>
     </section>
