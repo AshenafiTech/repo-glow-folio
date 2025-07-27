@@ -5,8 +5,8 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    description: "A comprehensive admin dashboard for managing e-commerce operations with real-time analytics, inventory management, and order processing.",
+    title: "YeneBrand",
+    description: "A startup platform that connects creators with brands for authentic collaborations, featuring matchmaking algorithms, campaign management, and performance analytics.",
     image: "photo-1460925895917-afdab827c52f",
     tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
     github: "https://github.com",
@@ -14,10 +14,10 @@ const projects = [
     featured: true
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, team collaboration features, and advanced filtering options.",
+    title: "SmartPath",
+    description: "An intelligent platform that helps university and college students make informed decisions about their academic departments through data-driven insights and peer reviews.",
     image: "photo-1611224923853-80b023f02d71",
-    tags: ["Next.js", "Socket.io", "MongoDB", "JWT", "Framer Motion"],
+    tags: ["Next.js", "Python", "MongoDB", "Machine Learning", "Chart.js"],
     github: "https://github.com",
     demo: "https://demo.com",
     featured: true
