@@ -31,17 +31,19 @@ const experiences = [
 
 const education = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University of Technology",
-    location: "California, USA",
-    period: "2015 - 2019",
-    description: "Graduated Magna Cum Laude. Focused on software engineering, algorithms, and distributed systems."
+    degree: "Bachelor of Software Engineering",
+    institution: "Addis Ababa University",
+    location: "Addis Ababa, Ethiopia",
+    period: "2022 - 2025",
+    description: "Currently pursuing a comprehensive software engineering degree with focus on modern development practices, algorithms, and system design.",
+    logo: "src/assets/aau-logo.jpg"
   },
   {
-    degree: "AWS Solutions Architect Certification",
-    institution: "Amazon Web Services",
-    period: "2021",
-    description: "Comprehensive training in cloud architecture, security, and best practices."
+    degree: "AWS Cloud Academy - Cloud Computing AWS Solutions Architect",
+    institution: "ALX Africa",
+    period: "May 2023 - Feb 2024",
+    description: "Intensive cloud computing program focusing on AWS solutions architecture, cloud infrastructure, and DevOps practices.",
+    logo: "src/assets/alx-logo.png"
   }
 ]
 
@@ -107,16 +109,27 @@ export function ExperienceSection() {
               <Card key={index} className="project-card hover-lift">
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                      <CardTitle className="text-xl mb-2">{edu.degree}</CardTitle>
-                      <div className="flex items-center gap-4 text-muted-foreground">
-                        <span className="font-medium">{edu.institution}</span>
-                        {edu.location && (
-                          <div className="flex items-center gap-1">
-                            <MapPin className="h-4 w-4" />
-                            <span className="text-sm">{edu.location}</span>
-                          </div>
-                        )}
+                    <div className="flex items-start gap-4">
+                      {edu.logo && (
+                        <div className="flex-shrink-0">
+                          <img 
+                            src={edu.logo} 
+                            alt={`${edu.institution} logo`}
+                            className="w-12 h-12 object-contain rounded-lg bg-white p-1"
+                          />
+                        </div>
+                      )}
+                      <div>
+                        <CardTitle className="text-xl mb-2">{edu.degree}</CardTitle>
+                        <div className="flex items-center gap-4 text-muted-foreground">
+                          <span className="font-medium">{edu.institution}</span>
+                          {edu.location && (
+                            <div className="flex items-center gap-1">
+                              <MapPin className="h-4 w-4" />
+                              <span className="text-sm">{edu.location}</span>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                     <div className="flex items-center gap-1 text-primary">
