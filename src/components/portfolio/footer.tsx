@@ -10,11 +10,10 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="font-bold text-xl hero-text-gradient">
-              Ashenafi.tech
+              Ashenafi
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Full-stack developer passionate about creating beautiful, 
-              functional web experiences that make a difference.
+              Software Engineer specializing in cloud-native technologies and AI. AWS Cloud Club Captain, mentor, and community builder. Passionate about helping others grow and building scalable solutions that make a real impact.
             </p>
             <div className="flex space-x-4">
               <a href="https://github.com/AshenafiTech" target="_blank" rel="noopener noreferrer"
@@ -58,11 +57,11 @@ export function Footer() {
             <h3 className="font-semibold">Services</h3>
             <div className="flex flex-col space-y-2 text-muted-foreground">
               <div>Cloud Architecture</div>
-              <div>Web Development</div>
-              <div>DevOps & CI/CD</div>
-              <div>MLOps</div>
               <div>System Design</div>
-              <div>Consulting</div>
+              <div>DevOps & CI/CD</div>
+              <div>Microservices</div>
+              <div>Infrastructure as Code</div>
+              <div>Mentorship & Consulting</div>
             </div>
           </div>
         </div>
@@ -70,12 +69,12 @@ export function Footer() {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-muted-foreground text-sm">
-              © {currentYear} Ashenafi. All rights reserved.
+              © {currentYear} Ashenafi Godanaj. All rights reserved.
             </div>
             <div className="flex items-center space-x-1 text-muted-foreground text-sm">
               <span>Made with</span>
               <Heart className="h-4 w-4 text-red-500" />
-              <span>using React & Tailwind CSS</span>
+              <span>by Ashenafi — Cloud, AI & Community</span>
             </div>
           </div>
         </div>
