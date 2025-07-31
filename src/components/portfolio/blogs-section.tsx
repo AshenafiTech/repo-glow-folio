@@ -56,7 +56,7 @@ export function BlogsSection() {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogs.map((blog, index) => (
+          {blogs.slice(0, 3).map((blog, index) => (
             <Card key={blog.title} className="project-card hover-lift overflow-hidden group"
                   style={{animationDelay: `${index * 0.1}s`}}>
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary-glow/20 overflow-hidden">

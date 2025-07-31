@@ -58,6 +58,34 @@ const projects = [
     demo: "https://demo.com",
     featured: false
   }
+  ,
+  {
+    title: "TaskFlow Pro",
+    description: "A productivity app for teams to manage tasks, track progress, and collaborate in real-time with Kanban boards and notifications.",
+    image: "photo-1519389950473-47ba0277781c",
+    tags: ["Vue.js", "Firebase", "TypeScript", "PWA"],
+    github: "https://github.com",
+    demo: "https://demo.com",
+    featured: false
+  },
+  {
+    title: "Evently",
+    description: "A modern event management platform for creating, promoting, and tracking events with ticketing and analytics.",
+    image: "photo-1465101046530-73398c7f28ca",
+    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    github: "https://github.com",
+    demo: "https://demo.com",
+    featured: false
+  },
+  {
+    title: "FitTrackr",
+    description: "A fitness tracking app that helps users set goals, log workouts, and visualize progress with interactive charts.",
+    image: "photo-1506744038136-46273834b3fb",
+    tags: ["Flutter", "Firebase", "Dart", "Chart.js"],
+    github: "https://github.com",
+    demo: "https://demo.com",
+    featured: false
+  }
 ]
 
 export function ProjectsSection() {
@@ -67,6 +95,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container px-4">
+        {/*
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 hero-text-gradient">
             Featured Projects
@@ -76,7 +105,6 @@ export function ProjectsSection() {
           </p>
         </div>
         
-        {/* Featured Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {featuredProjects.map((project, index) => (
             <Card key={project.title} className="project-card hover-lift overflow-hidden"
@@ -119,12 +147,13 @@ export function ProjectsSection() {
             </Card>
           ))}
         </div>
+        */}
         
         {/* Other Projects */}
         <div>
-          <h3 className="text-2xl font-semibold mb-8 text-center">Other Notable Projects</h3>
+          <h3 className="text-2xl font-semibold mb-8 text-center">Notable Projects</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {otherProjects.slice(0, 3).map((project, index) => (
+            {otherProjects.slice(0, 6).map((project, index) => (
               <Card key={project.title} className="project-card hover-lift"
                     style={{animationDelay: `${(index + 2) * 0.1}s`}}>
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary-glow/10 flex items-center justify-center">
