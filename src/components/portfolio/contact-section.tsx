@@ -46,9 +46,9 @@ export function ContactSection() {
             <div className="animate-fade-in">
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                I'm always interested in new opportunities and collaborations. 
-                Whether you have a project idea, want to discuss potential work, 
-                or just want to say hello, I'd love to hear from you!
+                Whether you have a project in mind, need a speaker for your event, 
+                want to explore collaboration opportunities, or just want to connect - 
+                I'm here and ready to help bring your vision to life.
               </p>
             </div>
             
@@ -113,75 +113,83 @@ export function ContactSection() {
           </div>
           
           {/* Contact Form */}
-          <Card className="project-card hover-lift">
-            <CardHeader>
-              <CardTitle>Send Me a Message</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">First Name</label>
-                    <Input
-                      name="firstName"
-                      placeholder="John"
-                      className="hover:border-primary/50 focus:border-primary"
-                      value={form.firstName}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Last Name</label>
-                    <Input
-                      name="lastName"
-                      placeholder="Doe"
-                      className="hover:border-primary/50 focus:border-primary"
-                      value={form.lastName}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Email</label>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="john@example.com"
-                    className="hover:border-primary/50 focus:border-primary"
-                    value={form.email}
+          <div className="bg-card border border-border rounded-lg p-6 shadow-lg">
+            <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">First Name</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="Satya"
+                    className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                    value={form.firstName}
                     onChange={handleChange}
+                    required
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Subject</label>
-                  <Input
-                    name="subject"
-                    placeholder="Project Discussion"
-                    className="hover:border-primary/50 focus:border-primary"
-                    value={form.subject}
+                <div>
+                  <label className="block text-sm font-medium mb-2">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Nadella"
+                    className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                    value={form.lastName}
                     onChange={handleChange}
+                    required
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Message</label>
-                  <Textarea
-                    name="message"
-                    placeholder="Tell me about your project or how I can help you..."
-                    className="min-h-[120px] hover:border-primary/50 focus:border-primary"
-                    value={form.message}
-                    onChange={handleChange}
-                  />
-                </div>
-                <Button type="submit" className="w-full hover-lift hover-glow">
-                  <Send className="mr-2 h-4 w-4" />
-                  Send Message
-                </Button>
-                <p className="text-xs text-muted-foreground text-center">
-                  I'll get back to you within 24 hours
-                </p>
-              </form>
-            </CardContent>
-          </Card>
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="satya.nadella@microsoft.com"
+                  className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Project Discussion"
+                  className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                  value={form.subject}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2">Message</label>
+                <textarea
+                  name="message"
+                  placeholder="Tell me about your project or how I can help you..."
+                  rows={5}
+                  className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-vertical"
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-colors flex items-center justify-center gap-2"
+              >
+                <Send className="h-4 w-4" />
+                Send Message
+              </button>
+              <p className="text-xs text-muted-foreground text-center">
+                I'll get back to you within 24 hours
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
