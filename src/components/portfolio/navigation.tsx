@@ -37,13 +37,13 @@ export function Navigation() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"
     }`}>
+      {/* Resume button is back in the right actions, with no fixed/absolute positioning, and will not shrink or grow */}
       <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="font-bold text-xl hero-text-gradient">
-            Ashenafi.dev
+            Ashenafi
           </div>
-          
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -56,26 +56,20 @@ export function Navigation() {
               </button>
             ))}
           </div>
-          
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="hidden sm:flex hover-lift"
+            <Button
+              variant="outline"
+              size="sm"
+              className="hidden sm:flex hover-lift flex-none"
               onClick={() => {
-                // Create a downloadable resume link
-                const link = document.createElement('a')
-                link.href = '/resume.pdf' // You'll need to add this file to the public folder
-                link.download = 'Ashenafi_Resume.pdf'
-                link.click()
+                window.open('https://docs.google.com/document/d/1HbxDzC6AspTOGhdW5pwB9NrNjUQw6BN34GN3XqnSg2E/edit?usp=sharing', '_blank', 'noopener,noreferrer')
               }}
             >
               <Download className="mr-2 h-4 w-4" />
               Resume
             </Button>
-            
             {/* Mobile Menu Button */}
             <Button
               variant="ghost"
@@ -87,7 +81,6 @@ export function Navigation() {
             </Button>
           </div>
         </div>
-        
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
@@ -101,19 +94,16 @@ export function Navigation() {
                   {item.name}
                 </button>
               ))}
-              <Button 
-                variant="outline" 
-                size="sm" 
+              <Button
+                variant="outline"
+                size="sm"
                 className="w-fit mt-4"
                 onClick={() => {
-                  const link = document.createElement('a')
-                  link.href = '/resume.pdf'
-                  link.download = 'Ashenafi_Resume.pdf'
-                  link.click()
+                  window.open('https://docs.google.com/document/d/1HbxDzC6AspTOGhdW5pwB9NrNjUQw6BN34GN3XqnSg2E/edit?usp=sharing', '_blank', 'noopener,noreferrer')
                 }}
               >
                 <Download className="mr-2 h-4 w-4" />
-                Download Resume
+                Resume
               </Button>
             </div>
           </div>

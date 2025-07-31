@@ -1,5 +1,6 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import heroPhoto from "@/assets/hero.jpg"
 
 export function HeroSection() {
   return (
@@ -13,20 +14,15 @@ export function HeroSection() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
                   Building scalable solutions and helping businesses grow.
                 </h1>
-                
+
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                  Ashenafi is a Software Engineer at Microsoft, where he focuses on cloud-native 
-                  technologies and AI, helping companies modernize their infrastructure and adopt 
-                  innovative solutions. He is also the founder of DevCommunity, a community initiative 
-                  where he mentors individuals in tech. His educational content on YouTube has been 
-                  watched by millions. A passionate advocate for open source, Ashenafi regularly speaks 
-                  at industry conferences on cloud, AI, and developer growth.
+                  Ashenafi is a Software Engineer specializing in cloud-native technologies and AI. He is an AWS Cloud Club Captain, creates educational content, and actively participates in tech communities.
                 </p>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="text-base px-8 py-6"
                   onClick={() => {
                     const aboutSection = document.querySelector('#about')
@@ -38,9 +34,9 @@ export function HeroSection() {
                   <ArrowDown className="mr-2 h-4 w-4" />
                   Know more
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
+                <Button
+                  variant="outline"
+                  size="lg"
                   className="text-base px-8 py-6"
                   onClick={() => {
                     const contactSection = document.querySelector('#contact')
@@ -53,44 +49,44 @@ export function HeroSection() {
                 </Button>
               </div>
             </div>
-            
+
             {/* Right Content - Professional Photo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-muted">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=face" 
+                  <img
+                    src={heroPhoto}
                     alt="Ashenafi - Software Engineer"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center scale-110 transition-transform duration-500"
                   />
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Four Key Points Grid */}
           <div className="mt-24 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="space-y-3">
               <h3 className="text-lg font-semibold text-foreground">Software Engineer</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Has built scalable applications for millions of users, sharing expertise in modern development practices.
+                Has built scalable applications for users, sharing expertise in modern development practices.
               </p>
             </div>
-            
+
             <div className="space-y-3">
               <h3 className="text-lg font-semibold text-foreground">Cloud consultant</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Provides insightful consultancy to companies embarking on their cloud transformation journeys.
+                Provides cloud consults and mentorship for students and companies.
               </p>
             </div>
-            
+
             <div className="space-y-3">
               <h3 className="text-lg font-semibold text-foreground">Community leader & speaker</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Renowned for exceptional community leadership and engaging as a speaker at global tech conferences.
+                Renowned for exceptional community leadership and engaging as a speaker at tech events.
               </p>
             </div>
-            
+
             <div className="space-y-3">
               <h3 className="text-lg font-semibold text-foreground">Empathy and professionalism</h3>
               <p className="text-muted-foreground leading-relaxed">

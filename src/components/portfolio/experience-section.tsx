@@ -4,28 +4,12 @@ import { CalendarDays, MapPin } from "lucide-react"
 
 const experiences = [
   {
-    title: "Senior Software Engineer",
-    company: "Tech Solutions Inc.",
-    location: "San Francisco, CA",
-    period: "2022 - Present",
-    description: "Lead cloud architecture initiatives and full-stack development projects. Designed and implemented scalable microservices architecture on AWS, reducing system latency by 40%.",
-    technologies: ["AWS", "Python", "Node.js", "Docker", "Kubernetes", "PostgreSQL"]
-  },
-  {
-    title: "Cloud Developer",
-    company: "CloudTech Systems",
-    location: "Seattle, WA", 
-    period: "2020 - 2022",
-    description: "Developed and maintained cloud-native applications using multi-cloud strategies. Implemented CI/CD pipelines and infrastructure automation, improving deployment efficiency by 60%.",
-    technologies: ["GCP", "Azure", "FastAPI", "MongoDB", "Docker", "Terraform"]
-  },
-  {
-    title: "Software Developer",
-    company: "StartupXYZ",
-    location: "Austin, TX",
-    period: "2019 - 2020", 
-    description: "Built full-stack web applications and RESTful APIs. Collaborated with cross-functional teams to deliver high-quality software solutions using agile methodologies.",
-    technologies: ["JavaScript", "Django", "MySQL", "Redis", "Git"]
+    title: "AI Intern",
+    company: "iCog Labs",
+    location: "Addis Ababa, Ethiopia",
+    period: "July 2024 - Oct 2024", // Update period as needed
+    description: "As an AI Intern at iCog Labs, I focused on testing and containerizing web applications and machine learning models, implementing Retrieval-Augmented Generation (RAG) systems, and contributing to research and development in emerging AI technologies.",
+    technologies: ["Python", "Docker", "Machine Learning", "RAG", "AI Research"]
   }
 ]
 
@@ -34,16 +18,27 @@ const education = [
     degree: "Bachelor of Software Engineering",
     institution: "Addis Ababa University",
     location: "Addis Ababa, Ethiopia",
-    period: "2022 - 2025",
+    period: "2022 - 2027",
     description: "Currently pursuing a comprehensive software engineering degree with focus on modern development practices, algorithms, and system design.",
-    logo: "src/assets/aau-logo.jpg"
+    logo: "/aau.png",
+    courses: [
+      "Web Development",
+      "Mobile Development",
+      "Operating Systems",
+      "Object-Oriented Programming",
+      "Data Structures & Algorithms",
+      "Databases",
+      "Artificial Intelligence",
+      "Cybersecurity"
+    ]
   },
   {
     degree: "AWS Cloud Academy - Cloud Computing AWS Solutions Architect",
     institution: "ALX Africa",
     period: "May 2023 - Feb 2024",
     description: "Intensive cloud computing program focusing on AWS solutions architecture, cloud infrastructure, and DevOps practices.",
-    logo: "src/assets/alx-logo.png"
+    logo: "/alx.png",
+    technologies: ["AWS", "CloudFormation", "EC2", "S3", "IAM", "VPC", "Lambda", "DevOps", "RDS", "CloudWatch", "ECS", "ECR", "Route 53", "CI/CD", "Linux"]
   }
 ]
 
@@ -64,7 +59,7 @@ export function ExperienceSection() {
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-center">Professional Experience</h3>
           <div className="space-y-6 max-w-4xl mx-auto">
-            {experiences.map((exp, index) => (
+            {[experiences[0]].map((exp, index) => (
               <Card key={index} className="project-card hover-lift">
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -112,8 +107,8 @@ export function ExperienceSection() {
                     <div className="flex items-start gap-4">
                       {edu.logo && (
                         <div className="flex-shrink-0">
-                          <img 
-                            src={edu.logo} 
+                          <img
+                            src={edu.logo}
                             alt={`${edu.institution} logo`}
                             className="w-12 h-12 object-contain rounded-lg bg-white p-1"
                           />
@@ -139,9 +134,27 @@ export function ExperienceSection() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed mb-2">
                     {edu.description}
                   </p>
+                  {edu.courses && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {edu.courses.map((course: string) => (
+                        <span key={course} className="inline-block rounded bg-primary/10 text-primary px-3 py-1 text-xs font-medium border border-primary/20 hover:bg-primary/20 transition-colors cursor-default">
+                          {course}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  {edu.technologies && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {edu.technologies.map((tech: string) => (
+                        <span key={tech} className="inline-block rounded bg-primary/10 text-primary px-3 py-1 text-xs font-medium border border-primary/20 hover:bg-primary/20 transition-colors cursor-default">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}

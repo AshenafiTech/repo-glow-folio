@@ -17,15 +17,15 @@ export function Footer() {
               functional web experiences that make a difference.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/AshenafiTech" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors hover-lift">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/ashenafig/" target="_blank" rel="noopener noreferrer"
                  className="text-muted-foreground hover:text-primary transition-colors hover-lift">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="mailto:hello@ashenafi.tech"
+              <a href="mailto:ashenafigodanaj@gmail.com"
                  className="text-muted-foreground hover:text-primary transition-colors hover-lift">
                 <Mail className="h-5 w-5" />
               </a>
@@ -57,9 +57,11 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Services</h3>
             <div className="flex flex-col space-y-2 text-muted-foreground">
+              <div>Cloud Architecture</div>
               <div>Web Development</div>
-              <div>Mobile Apps</div>
-              <div>UI/UX Design</div>
+              <div>DevOps & CI/CD</div>
+              <div>MLOps</div>
+              <div>System Design</div>
               <div>Consulting</div>
             </div>
           </div>
