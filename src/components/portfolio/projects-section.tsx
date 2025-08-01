@@ -2,160 +2,171 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
+import yenebrandImage from "@/assets/yenebrand.png"
+import smartpathImage from "@/assets/smartpath.png"
 
-const projects = [
+const fullstackProjects = [
   {
     title: "YeneBrand",
     description: "A startup platform that connects creators with brands for authentic collaborations, featuring matchmaking algorithms, campaign management, and performance analytics.",
-    image: "photo-1460925895917-afdab827c52f",
+    image: yenebrandImage,
     tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: true
+    github: "https://github.com/AshenafiTech/yenebrand",
+    demo: "https://yenebrand.vercel.app",
+    category: "Fullstack"
   },
   {
     title: "SmartPath",
     description: "An intelligent platform that helps university and college students make informed decisions about their academic departments through data-driven insights and peer reviews.",
-    image: "photo-1611224923853-80b023f02d71",
+    image: smartpathImage,
     tags: ["Next.js", "Python", "MongoDB", "Machine Learning", "Chart.js"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: true
-  },
-  {
-    title: "Weather Analytics Platform",
-    description: "A data visualization platform that analyzes weather patterns and provides predictive insights using machine learning algorithms.",
-    image: "photo-1504608524841-42fe6f032b4b",
-    tags: ["Vue.js", "Python", "FastAPI", "Chart.js", "Docker"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: true
-  },
-  {
-    title: "Social Media Mobile App",
-    description: "A cross-platform mobile application for social networking with features like real-time messaging, media sharing, and user profiles.",
-    image: "photo-1432821596592-e2c18b78144f",
-    tags: ["React Native", "Firebase", "Redux", "Expo", "TypeScript"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: false
-  },
-  {
-    title: "Portfolio Website Builder",
-    description: "A drag-and-drop website builder specifically designed for creating beautiful portfolio websites with customizable templates.",
-    image: "photo-1467232004584-a241de8bcf5d",
-    tags: ["React", "Django", "AWS S3", "Stripe", "Material-UI"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: false
-  },
-  {
-    title: "Learning Management System",
-    description: "An educational platform with course management, progress tracking, video streaming, and interactive quizzes for online learning.",
-    image: "photo-1501504905252-473c47e087f8",
-    tags: ["Angular", "NestJS", "PostgreSQL", "Redis", "WebRTC"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: false
+    github: "https://github.com/AshenafiTech/smartpath",
+    demo: "https://smartpath.vercel.app",
+    category: "Fullstack"
   }
-  ,
+]
+
+const backendProjects = [
   {
-    title: "TaskFlow Pro",
-    description: "A productivity app for teams to manage tasks, track progress, and collaborate in real-time with Kanban boards and notifications.",
-    image: "photo-1519389950473-47ba0277781c",
-    tags: ["Vue.js", "Firebase", "TypeScript", "PWA"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: false
+    title: "ALX System Engineering DevOps",
+    description: "A comprehensive collection of system engineering and DevOps projects covering shell scripting, networking, web infrastructure, and automation.",
+    image: "photo-1518432031352-d6fc5c10da5a",
+    tags: ["Bash", "Python", "Nginx", "HAProxy", "MySQL", "Docker"],
+    github: "https://github.com/AshenafiTech/alx-system_engineering-devops",
+    category: "Backend & Cloud"
   },
   {
-    title: "Evently",
-    description: "A modern event management platform for creating, promoting, and tracking events with ticketing and analytics.",
-    image: "photo-1465101046530-73398c7f28ca",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: false
+    title: "Online Poll System",
+    description: "A comprehensive online polling platform that allows users to create, manage, and participate in polls with real-time results and analytics.",
+    image: "photo-1586953208448-b95a79798f07",
+    tags: ["PHP", "MySQL", "JavaScript", "Bootstrap", "AJAX"],
+    github: "https://github.com/AshenafiTech/Online-Poll-System",
+    category: "Backend & Cloud"
   },
   {
-    title: "FitTrackr",
-    description: "A fitness tracking app that helps users set goals, log workouts, and visualize progress with interactive charts.",
-    image: "photo-1506744038136-46273834b3fb",
-    tags: ["Flutter", "Firebase", "Dart", "Chart.js"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    featured: false
+    title: "Journal API",
+    description: "A RESTful API for journal management built as part of the Learn to Cloud platform, featuring authentication, CRUD operations, and cloud deployment.",
+    image: "photo-1551288049-bebda4e38f71",
+    tags: ["Node.js", "Express", "MongoDB", "JWT", "AWS", "Docker"],
+    github: "https://github.com/AshenafiTech/journal-api",
+    category: "Backend & Cloud"
+  }
+]
+
+const dataProjects = [
+  {
+    title: "Intelligent Compliant Analysis",
+    description: "Advanced compliance analysis system for financial services using machine learning to detect regulatory violations and ensure adherence to financial standards.",
+    image: "photo-1551288049-bebda4e38f71",
+    tags: ["Python", "Machine Learning", "NLP", "Pandas", "Scikit-learn", "TensorFlow"],
+    github: "https://github.com/AshenafiTech/Intelligent-Compliant-analysis-for-financial-services",
+    category: "Data Science"
+  },
+  {
+    title: "Credit Risk Model",
+    description: "A sophisticated credit risk assessment model using machine learning algorithms to predict loan default probability and assess creditworthiness.",
+    image: "photo-1554224155-6726b3ff858f",
+    tags: ["Python", "Machine Learning", "Pandas", "Scikit-learn", "XGBoost", "Feature Engineering"],
+    github: "https://github.com/AshenafiTech/credit-risk-model",
+    category: "Data Science"
+  },
+  {
+    title: "End-to-End Insurance Analytics",
+    description: "Comprehensive insurance analytics platform providing insights into claims processing, risk assessment, and customer behavior analysis.",
+    image: "photo-1507003211169-0a1dd7228f2d",
+    tags: ["Python", "Data Analytics", "Pandas", "Matplotlib", "Seaborn", "Statistical Analysis"],
+    github: "https://github.com/AshenafiTech/end-to-end-insurance-analytics",
+    category: "Data Science"
   }
 ]
 
 export function ProjectsSection() {
-  const featuredProjects = projects.filter(p => p.featured)
-  const otherProjects = projects.filter(p => !p.featured)
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container px-4">
-        {/*
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 hero-text-gradient">
-            Featured Projects
+            My Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Here are some of my recent work that showcase my skills and experience
+            A showcase of my work across fullstack development, backend & cloud systems, and data science
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {featuredProjects.map((project, index) => (
-            <Card key={project.title} className="project-card hover-lift overflow-hidden"
-                  style={{animationDelay: `${index * 0.2}s`}}>
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary-glow/20 flex items-center justify-center">
-                <img 
-                  src={`https://images.unsplash.com/${project.image}?w=600&h=400&fit=crop`}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  {project.title}
-                  <Badge className="ml-2">Featured</Badge>
-                </CardTitle>
-                <CardDescription className="text-base">
-                  {project.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  <Button variant="outline" size="sm" className="hover-lift">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="hover-lift hover-glow">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        */}
-        
-        {/* Other Projects */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-8 text-center">Notable Projects</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {otherProjects.slice(0, 6).map((project, index) => (
+        {/* Fullstack Projects */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-semibold mb-8 text-center">Fullstack Projects</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {fullstackProjects.map((project, index) => (
               <Card key={project.title} className="project-card hover-lift"
-                    style={{animationDelay: `${(index + 2) * 0.1}s`}}>
+                    style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary-glow/10 flex items-center justify-center">
+                  <img 
+                    src={typeof project.image === 'string' && project.image.startsWith('photo-') 
+                      ? `https://images.unsplash.com/${project.image}?w=400&h=250&fit=crop`
+                      : project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center justify-between text-lg">
+                    {project.title}
+                    <Badge variant="outline">{project.category}</Badge>
+                  </CardTitle>
+                  <CardDescription className="text-sm">
+                    {project.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {project.tags.slice(0, 4).map((tag) => (
+                      <Badge key={tag} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                    {project.tags.length > 4 && (
+                      <Badge variant="secondary" className="text-xs">
+                        +{project.tags.length - 4}
+                      </Badge>
+                    )}
+                  </div>
+                  <div className="flex gap-2">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex-1 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 hover-lift"
+                    >
+                      <Github className="mr-1 h-3 w-3" />
+                      Code
+                    </a>
+                    {project.demo && (
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex-1 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 hover-lift"
+                      >
+                        <ExternalLink className="mr-1 h-3 w-3" />
+                        Demo
+                      </a>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Backend & Cloud Projects */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-semibold mb-8 text-center">Backend & Cloud Projects</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {backendProjects.map((project, index) => (
+              <Card key={project.title} className="project-card hover-lift"
+                    style={{animationDelay: `${index * 0.1}s`}}>
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary-glow/10 flex items-center justify-center">
                   <img 
                     src={`https://images.unsplash.com/${project.image}?w=400&h=250&fit=crop`}
@@ -164,8 +175,64 @@ export function ProjectsSection() {
                   />
                 </div>
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg">{project.title}</CardTitle>
-                  <CardDescription className="text-sm line-clamp-2">
+                  <CardTitle className="flex items-center justify-between text-lg">
+                    {project.title}
+                    <Badge variant="outline">{project.category}</Badge>
+                  </CardTitle>
+                  <CardDescription className="text-sm">
+                    {project.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {project.tags.slice(0, 4).map((tag) => (
+                      <Badge key={tag} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                    {project.tags.length > 4 && (
+                      <Badge variant="secondary" className="text-xs">
+                        +{project.tags.length - 4}
+                      </Badge>
+                    )}
+                  </div>
+                  <div className="flex gap-2">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex-1 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 hover-lift"
+                    >
+                      <Github className="mr-1 h-3 w-3" />
+                      Code
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Data Science Projects */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-semibold mb-8 text-center">Data Science Projects</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {dataProjects.map((project, index) => (
+              <Card key={project.title} className="project-card hover-lift"
+                    style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary-glow/10 flex items-center justify-center">
+                  <img 
+                    src={`https://images.unsplash.com/${project.image}?w=400&h=250&fit=crop`}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center justify-between text-lg">
+                    {project.title}
+                    <Badge variant="outline">{project.category}</Badge>
+                  </CardTitle>
+                  <CardDescription className="text-sm">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
@@ -183,14 +250,15 @@ export function ProjectsSection() {
                     )}
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1 hover-lift">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex-1 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 hover-lift"
+                    >
                       <Github className="mr-1 h-3 w-3" />
                       Code
-                    </Button>
-                    <Button size="sm" className="flex-1 hover-lift">
-                      <ExternalLink className="mr-1 h-3 w-3" />
-                      Demo
-                    </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -199,10 +267,15 @@ export function ProjectsSection() {
         </div>
         
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="hover-lift">
+          <a 
+            href="https://github.com/AshenafiTech" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 hover-lift"
+          >
             <Github className="mr-2 h-4 w-4" />
             View All Projects on GitHub
-          </Button>
+          </a>
         </div>
       </div>
     </section>
