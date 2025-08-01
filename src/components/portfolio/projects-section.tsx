@@ -86,7 +86,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 hero-text-gradient">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 hero-text-gradient">
             My Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -94,8 +94,8 @@ export function ProjectsSection() {
           </p>
         </div>
         
-        {/* Fullstack Projects */}
-        <div className="mb-16">
+        {/* Fullstack Projects - Hidden for now */}
+        {/* <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-center">Fullstack Projects</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {fullstackProjects.map((project, index) => (
@@ -158,7 +158,7 @@ export function ProjectsSection() {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Backend & Cloud Projects */}
         <div className="mb-16">
