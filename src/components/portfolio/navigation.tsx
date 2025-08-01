@@ -62,7 +62,7 @@ export function Navigation() {
             <Button
               variant="outline"
               size="sm"
-              className="hidden sm:flex hover-lift flex-none"
+              className="hidden sm:flex flex-none"
               onClick={() => {
                 window.open('https://docs.google.com/document/d/1HbxDzC6AspTOGhdW5pwB9NrNjUQw6BN34GN3XqnSg2E/edit?usp=sharing', '_blank', 'noopener,noreferrer')
               }}

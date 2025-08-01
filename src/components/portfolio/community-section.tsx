@@ -1,19 +1,34 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Users, Award, Globe } from "lucide-react"
+import awsaauLogo from "@/assets/awsaau.svg"
+import gdgLogo from "@/assets/gdg.png"
 
 const communityRoles = [
   {
     title: "AWS Cloud Captain",
-    organization: "Amazon Web Services",
+    organization: "AWS Cloud Clubs",
     period: "2024 - Present",
     description: "Leading cloud adoption initiatives and mentoring developers in AWS best practices. Organizing workshops and speaking at tech events.",
-    icon: Globe,
+    logo: awsaauLogo,
     tags: ["Cloud Architecture", "Community Building", "Technical Leadership"],
     achievements: [
       "Mentored 50+ developers in cloud technologies",
       "Organized 10+ AWS workshops",
       "Spoke at 5 major tech conferences"
+    ]
+  },
+  {
+    title: "Data Structures and Algorithms Instructor",
+    organization: "GDG Addis Ababa University",
+    period: "2023 - 2024",
+    description: "Taught data structures and algorithms to over 20 students, preparing them for technical interviews and improving their problem-solving skills.",
+    logo: gdgLogo,
+    tags: ["Teaching", "Algorithms", "Interview Preparation", "Mentorship"],
+    achievements: [
+      "Taught 20+ students data structures and algorithms",
+      "Improved students' technical interview success rate",
+      "Developed comprehensive curriculum for coding interviews"
     ]
   }
 ]
@@ -23,7 +38,7 @@ export const CommunitySection = () => {
     <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Community Leadership</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">Community and Leadership</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Contributing to the tech community through leadership roles, mentorship, and knowledge sharing
           </p>
@@ -37,7 +52,7 @@ export const CommunitySection = () => {
                 <CardHeader>
                   <div className="flex items-start gap-4">
                     <div className="p-2 rounded-lg bg-primary/10">
-                      <IconComponent className="h-6 w-6 text-primary" />
+                      <img src={role.logo} alt={`${role.organization} logo`} className="h-12 w-12 object-contain" />
                     </div>
                     <div className="flex-1">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
