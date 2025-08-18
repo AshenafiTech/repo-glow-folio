@@ -13,9 +13,9 @@ const communityRoles = [
     logo: awsaauLogo,
     tags: ["Cloud Architecture", "Community Building", "Technical Leadership"],
     achievements: [
-      "Mentored 50+ developers in cloud technologies",
-      "Organized 10+ AWS workshops",
-      "Spoke at 5 major tech conferences"
+      "Led a club of 300+ developers in cloud technologies",
+      "Organized 2 AWS workshops",
+      // "Spoke at 5 major tech conferences"
     ]
   },
   {
