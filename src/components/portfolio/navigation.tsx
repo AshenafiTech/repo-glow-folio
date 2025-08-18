@@ -64,7 +64,7 @@ export function Navigation() {
               size="sm"
               className="hidden sm:flex flex-none"
               onClick={() => {
-                window.open('https://drive.google.com/file/d/1LGGrYl_pJCCOsc7WNRvkn2vmTImFa94v/view?usp=sharing', '_blank', 'noopener,noreferrer')
+                window.open('https://drive.google.com/file/d/1FgjlHo9F1vAplOonGMEQBXix75H7Z1DK/view?usp=sharing', '_blank', 'noopener,noreferrer')
               }}
             >
               <Download className="mr-2 h-4 w-4" />
