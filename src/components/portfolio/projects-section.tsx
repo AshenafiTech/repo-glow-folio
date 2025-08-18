@@ -38,7 +38,7 @@ const backendProjects = [
   {
     title: "Online Poll System",
     description: "A comprehensive online polling platform that allows users to create, manage, and participate in polls with real-time results and analytics.",
-    image: "photo-1586953208448-b95a79798f07",
+    image: "photo-1551288049-bebda4e38f71",
     tags: ["PHP", "MySQL", "JavaScript", "Bootstrap", "AJAX"],
     github: "https://github.com/AshenafiTech/Online-Poll-System",
     category: "Backend & Cloud"
@@ -46,7 +46,7 @@ const backendProjects = [
   {
     title: "Journal API",
     description: "A RESTful API for journal management built as part of the Learn to Cloud platform, featuring authentication, CRUD operations, and cloud deployment.",
-    image: "photo-1551288049-bebda4e38f71",
+    image: "photo-1481627834876-b7833e8f5570",
     tags: ["Node.js", "Express", "MongoDB", "JWT", "AWS", "Docker"],
     github: "https://github.com/AshenafiTech/journal-api",
     category: "Backend & Cloud"
@@ -57,7 +57,7 @@ const dataProjects = [
   {
     title: "Intelligent Compliant Analysis",
     description: "Advanced compliance analysis system for financial services using machine learning to detect regulatory violations and ensure adherence to financial standards.",
-    image: "photo-1551288049-bebda4e38f71",
+    image: "photo-1560472354-b33ff0c44a43",
     tags: ["Python", "Machine Learning", "NLP", "Pandas", "Scikit-learn", "TensorFlow"],
     github: "https://github.com/AshenafiTech/Intelligent-Compliant-analysis-for-financial-services",
     category: "Data Science"
@@ -65,7 +65,7 @@ const dataProjects = [
   {
     title: "Credit Risk Model",
     description: "A sophisticated credit risk assessment model using machine learning algorithms to predict loan default probability and assess creditworthiness.",
-    image: "photo-1554224155-6726b3ff858f",
+    image: "photo-1579621970795-87facc2f976d",
     tags: ["Python", "Machine Learning", "Pandas", "Scikit-learn", "XGBoost", "Feature Engineering"],
     github: "https://github.com/AshenafiTech/credit-risk-model",
     category: "Data Science"
@@ -73,7 +73,7 @@ const dataProjects = [
   {
     title: "End-to-End Insurance Analytics",
     description: "Comprehensive insurance analytics platform providing insights into claims processing, risk assessment, and customer behavior analysis.",
-    image: "photo-1507003211169-0a1dd7228f2d",
+    image: "photo-1450101499163-c8848c66ca85",
     tags: ["Python", "Data Analytics", "Pandas", "Matplotlib", "Seaborn", "Statistical Analysis"],
     github: "https://github.com/AshenafiTech/end-to-end-insurance-analytics",
     category: "Data Science"
