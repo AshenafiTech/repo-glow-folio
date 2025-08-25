@@ -46,7 +46,6 @@ export const CommunitySection = () => {
 
         <div className="grid gap-6">
           {communityRoles.map((role, index) => {
-            const IconComponent = role.icon
             return (
               <Card key={index} className="card-glass hover-lift">
                 <CardHeader>
