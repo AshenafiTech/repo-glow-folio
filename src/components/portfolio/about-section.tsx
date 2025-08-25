@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge"
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container px-4">
+    <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
+      <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 hero-text-gradient">
             About Me

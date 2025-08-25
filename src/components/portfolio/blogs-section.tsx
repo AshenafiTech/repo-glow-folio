@@ -45,7 +45,7 @@ const blogs = [
 export function BlogsSection() {
   return (
     <section id="blogs" className="py-20">
-      <div className="container px-4">
+  <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 hero-text-gradient">
             Latest Blog Posts

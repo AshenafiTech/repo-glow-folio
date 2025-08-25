@@ -83,8 +83,8 @@ const dataProjects = [
 export function ProjectsSection() {
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
-      <div className="container px-4">
+    <section id="projects" className="py-20 relative overflow-hidden">
+      <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-8 hero-text-gradient">
             My Projects

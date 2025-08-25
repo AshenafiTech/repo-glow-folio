@@ -45,8 +45,8 @@ export function SkillsSection() {
     embed?: boolean;
   }>(null);
   return (
-    <section id="skills" className="py-12">
-      <div className="container px-4">
+    <section id="skills" className="py-20 relative overflow-hidden">
+      <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 hero-text-gradient">
             Skills & Technologies

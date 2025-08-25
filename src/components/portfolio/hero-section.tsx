@@ -19,13 +19,14 @@ export function HeroSection() {
   ]
 
     return (
-      <section className="min-h-screen w-full flex items-center justify-center bg-background py-20 relative overflow-hidden">
+  <section className="min-h-screen w-full flex items-center justify-center bg-background py-20 relative overflow-hidden">
         {/* Animated Background - full width */}
     <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 animate-pulse opacity-70 transition-opacity duration-1000"></div>
     <div className="absolute top-10 left-0 w-[40vw] h-[40vw] max-w-[900px] max-h-[900px] bg-primary/10 rounded-full blur-3xl animate-float opacity-40 transition-opacity duration-1000"></div>
     <div className="absolute bottom-10 right-0 w-[50vw] h-[50vw] max-w-[1200px] max-h-[1200px] bg-secondary/10 rounded-full blur-3xl animate-float opacity-30 transition-opacity duration-1000" style={{animationDelay: '2s'}}></div>
-        <div className="container px-6 relative z-10 w-full">
-          <div className="max-w-full mx-auto px-0 w-full">
+        {/* Centered content: wider than default but constrained to avoid horizontal scroll */}
+        <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
+          <div className="w-full">
             <div className="grid lg:grid-cols-2 gap-20 items-center w-full">
               {/* Left Content */}
               <div className="space-y-10">
@@ -157,7 +158,7 @@ export function HeroSection() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Mentor & Educator</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Passionate about sharing knowledge, teaching algorithms, and helping developers grow their careers.
+                  Dedicated to sharing cloud expertise, guiding others in modern tech, and empowering learners in digital innovation.
                 </p>
               </div>
             </div>

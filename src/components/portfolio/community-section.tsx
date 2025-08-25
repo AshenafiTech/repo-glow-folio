@@ -35,8 +35,8 @@ const communityRoles = [
 
 export const CommunitySection = () => {
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section id="community" className="py-20 relative overflow-hidden">
+      <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4">Community and Leadership</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
