@@ -38,7 +38,7 @@ export function HeroSection() {
                     </div>
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                       <span className="block font-display text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">
-                        Inventing tomorrow:
+                        Crafting
                       </span>
                       <span className="block text-foreground mt-2">
                         <span className="font-bold text-primary">Scalable</span> solutions & <span className="font-bold text-secondary">AI-powered</span> apps
