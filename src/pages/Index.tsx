@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/portfolio/navigation"
 import { HeroSection } from "@/components/portfolio/hero-section"
 import { AboutSection } from "@/components/portfolio/about-section"
+import { CertificationsSection } from "@/components/portfolio/certifications-section"
 import { SkillsSection } from "@/components/portfolio/skills-section"
 import { ExperienceSection } from "@/components/portfolio/experience-section"
 import { ProjectsSection } from "@/components/portfolio/projects-section"
@@ -17,10 +18,11 @@ const Index = () => {
       <div id="hero">
         <HeroSection />
       </div>
+      <div id="certifications">
+        <CertificationsSection />
+      </div>
       <main className="max-w-6xl mx-auto">
-        <div id="about">
-          <AboutSection />
-        </div>
+  {/* About section removed per request */}
         <div id="skills">
           <SkillsSection />
         </div>
