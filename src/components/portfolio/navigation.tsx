@@ -37,50 +37,54 @@ export function Navigation() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"
     }`}>
-      {/* Resume button is back in the right actions, with no fixed/absolute positioning, and will not shrink or grow */}
-      <div className="container px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="font-bold text-xl hero-text-gradient">
-            Ashenafi
-          </div>
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors"
+      {/* Navigation aligned to the same centered container as the hero (max-w-[1400px] px-6) */}
+      <div className="w-full">
+        <div className="mx-auto max-w-[1400px] w-full px-6">
+          <div className="relative h-16 w-full">
+            {/* Left: Logo aligned to container left edge */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 font-bold text-xl hero-text-gradient">Ashenafi</div>
+
+            {/* Center: Desktop Navigation (centered) */}
+            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Right Side Actions: aligned to container right edge */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center space-x-4">
+              <ThemeToggle />
+              <Button
+                variant="outline"
+                size="sm"
+                className="hidden sm:flex flex-none"
+                onClick={() => {
+                  window.open('https://drive.google.com/file/d/1FgjlHo9F1vAplOonGMEQBXix75H7Z1DK/view?usp=sharing', '_blank', 'noopener,noreferrer')
+                }}
               >
-                {item.name}
-              </button>
-            ))}
-          </div>
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex flex-none"
-              onClick={() => {
-                window.open('https://drive.google.com/file/d/1FgjlHo9F1vAplOonGMEQBXix75H7Z1DK/view?usp=sharing', '_blank', 'noopener,noreferrer')
-              }}
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Resume
-            </Button>
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
+                <Download className="mr-2 h-4 w-4" />
+                Resume
+              </Button>
+
+              {/* Mobile Menu Button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
+            </div>
           </div>
         </div>
+
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
