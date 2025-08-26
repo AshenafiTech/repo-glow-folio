@@ -150,7 +150,7 @@ export function SkillsSection() {
 				const finalMarquee = stopIndex >= 0 ? marqueeItems.slice(0, stopIndex + 1) : marqueeItems
 
 				// prepare display list: unique, only items that have an icon component or a real SVG (not placeholder)
-				const excludeTop = new Set(['rds', 'sql'])
+				const excludeTop = new Set(['rds', 'sql', 'postgresql'])
 				const seenLogos = new Set<string>()
 				const displayMarquee = finalMarquee.filter((it) => {
 					const key = it.label.toLowerCase().replace(/\s|\.|-/g, '')

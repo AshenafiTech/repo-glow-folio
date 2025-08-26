@@ -24,7 +24,7 @@ export function AboutSection() {
                   I am a <span className="text-primary font-semibold">Software Engineer</span> focused on cloud-native architectures and AI/ML integrations. As an <span className="text-accent font-semibold">AWS Cloud Club Captain</span>, I create educational content, provide cloud consulting, and help teams adopt scalable, AI-enabled systems.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  My passion is helping others grow and building solutions that make a real impact. I craft scalable applications using <span className="text-secondary font-semibold">JavaScript, TypeScript, Python</span>, and cloud platforms like <span className="text-primary font-semibold">AWS, GCP, and Azure</span>.
+                  My passion is helping others grow and building solutions that make a real impact. I craft scalable applications using <span className="text-foreground font-semibold">JavaScript, TypeScript, Python</span>, and cloud platforms like <span className="text-foreground font-semibold">AWS, GCP, and Azure</span>.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I enjoy collaborating with diverse teams, sharing knowledge, and supporting the next generation of tech talent. My approach combines technical expertise with a strong sense of community and continuous learning.
