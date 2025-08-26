@@ -9,7 +9,7 @@ const communityRoles = [
     title: "AWS Cloud Captain",
     organization: "AWS Cloud Clubs",
     period: "2024 - Present",
-    description: "Leading cloud adoption initiatives and mentoring developers in AWS best practices. Organizing workshops and speaking at tech events.",
+    description: "Leading cloud adoption initiatives and teaching cloud skills in AWS best practices. Organizing workshops and speaking at tech events.",
     logo: awsaauLogo,
     tags: ["Cloud Architecture", "Community Building", "Technical Leadership"],
     achievements: [
