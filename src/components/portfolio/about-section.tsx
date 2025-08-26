@@ -10,7 +10,7 @@ export function AboutSection() {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Passionate about building digital experiences that make a difference
+            Passionate about building cloud-native and AI-driven solutions that make a difference
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold text-foreground">My Journey</h3>
               <div className="space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I am a <span className="text-primary font-semibold">Software Engineer</span> specializing in cloud-native technologies and AI. As an <span className="text-accent font-semibold">AWS Cloud Club Captain</span>, I create educational content, provide cloud consulting, and mentor students and companies.
+                  I am a <span className="text-primary font-semibold">Software Engineer</span> focused on cloud-native architectures and AI/ML integrations. As an <span className="text-accent font-semibold">AWS Cloud Club Captain</span>, I create educational content, provide cloud consulting, and help teams adopt scalable, AI-enabled systems.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   My passion is helping others grow and building solutions that make a real impact. I craft scalable applications using <span className="text-secondary font-semibold">JavaScript, TypeScript, Python</span>, and cloud platforms like <span className="text-primary font-semibold">AWS, GCP, and Azure</span>.
@@ -85,7 +85,7 @@ export function AboutSection() {
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  Mentoring next-gen developers
+                  Creating educational content and tutorials about cloud and AI for developers
                 </li>
               </ul>
             </div>
