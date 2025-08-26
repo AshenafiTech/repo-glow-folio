@@ -21,8 +21,10 @@ const Index = () => {
       <div id="certifications">
         <CertificationsSection />
       </div>
-      <main className="max-w-6xl mx-auto">
-  {/* About section removed per request */}
+      <main>
+        <div id="about">
+          <AboutSection />
+        </div>
         <div id="skills">
           <SkillsSection />
         </div>
@@ -35,9 +37,9 @@ const Index = () => {
         <div id="community">
           <CommunitySection />
         </div>
-        {/* <div id="blogs">
+        <div id="blogs">
           <BlogsSection />
-        </div> */}
+        </div>
         <div id="contact">
           <ContactSection />
         </div>
