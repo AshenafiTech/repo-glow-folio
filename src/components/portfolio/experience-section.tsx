@@ -1,14 +1,15 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CalendarDays, MapPin } from "lucide-react"
+import { CalendarDays, MapPin, GraduationCap, Briefcase } from "lucide-react"
 
 const experiences = [
   {
-  title: "Machine Learning Intern",
+    title: "Machine Learning Intern",
     company: "iCog Labs",
     location: "Addis Ababa, Ethiopia",
-    period: "July 2024 - Oct 2024", // Update period as needed
-  description: "As a Machine Learning Intern at iCog Labs, I focused on testing and containerizing web applications and machine learning models, implementing Retrieval-Augmented Generation (RAG) systems, and contributing to research and development in emerging AI technologies.",
+    period: "July 2024 - Oct 2024",
+    description: "As a Machine Learning Intern at iCog Labs, I focused on testing and containerizing web applications and machine learning models, implementing Retrieval-Augmented Generation (RAG) systems, and contributing to research and development in emerging AI technologies.",
     technologies: ["Python", "Docker", "Machine Learning", "RAG", "AI Research"]
   }
 ]
@@ -21,6 +22,7 @@ const education = [
     period: "2022 - 2027",
     description: "Currently pursuing a comprehensive software engineering degree with focus on modern development practices, algorithms, and system design.",
     logo: "/aau.png",
+    type: "degree",
     courses: [
       "Web Development",
       "Mobile Development",
@@ -33,11 +35,31 @@ const education = [
     ]
   },
   {
-    degree: "AWS Cloud Academy - Cloud Computing AWS Solutions Architect",
+    degree: "ALX Software Engineering Program",
     institution: "ALX Africa",
+    period: "2024 - Present",
+    description: "Intensive software engineering program focusing on backend development, DevOps practices, and system architecture. Building scalable, secure, and maintainable systems through hands-on projects and real-world applications.",
+    logo: "/alx.png",
+    type: "bootcamp",
+    keySkills: [
+      "Backend development with Django",
+      "Performance optimization and security best practices",
+      "DevOps & CI/CD using GitHub Actions, Docker, Kubernetes, and Bash scripting",
+      "Caching & data management with Redis",
+      "API design with REST and GraphQL",
+      "Web server deployment with Nginx",
+      "Testing & automation to ensure reliability"
+    ],
+    note: "Learning not just how to build systems that work, but systems that are scalable, secure, and maintainable.",
+    technologies: ["Django", "Docker", "Kubernetes", "Redis", "GraphQL", "Nginx", "GitHub Actions", "Bash"]
+  },
+  {
+    degree: "AWS Cloud Academy - Cloud Computing AWS Solutions Architect",
+    institution: "AWS Cloud Academy through ALX Africa",
     period: "May 2023 - Feb 2024",
     description: "Intensive cloud computing program focusing on AWS solutions architecture, cloud infrastructure, and DevOps practices.",
     logo: "/alx.png",
+    type: "certification",
     technologies: ["AWS", "CloudFormation", "EC2", "S3", "IAM", "VPC", "Lambda", "DevOps", "RDS", "CloudWatch", "ECS", "ECR", "Route 53", "CI/CD", "Linux"]
   }
 ]
@@ -55,109 +77,177 @@ export function ExperienceSection() {
           </p>
         </div>
 
-        {/* Experience Section */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Professional Experience</h3>
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {[experiences[0]].map((exp, index) => (
-              <Card key={index} className="project-card hover-lift">
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                      <CardTitle className="text-xl mb-2">{exp.title}</CardTitle>
-                      <div className="flex items-center gap-4 text-muted-foreground">
-                        <span className="font-medium">{exp.company}</span>
-                        <div className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4" />
-                          <span className="text-sm">{exp.location}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-1 text-primary">
-                      <CalendarDays className="h-4 w-4" />
-                      <span className="text-sm font-medium">{exp.period}</span>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Experience Column */}
+          <div className="space-y-8">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-3 bg-primary/10 rounded-full">
+                <Briefcase className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-2xl font-semibold">Professional Experience</h3>
+            </div>
+            
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border"></div>
+              
+              <div className="space-y-8">
+                {experiences.map((exp, index) => (
+                  <div key={index} className="relative">
+                    {/* Timeline dot */}
+                    <div className="absolute left-4 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
+                    
+                    <div className="ml-14">
+                      <Card className="project-card hover-lift">
+                        <CardHeader className="pb-4">
+                          <div className="flex flex-col gap-3">
+                            <CardTitle className="text-xl">{exp.title}</CardTitle>
+                            <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+                              <div className="flex items-center gap-2">
+                                <span className="font-medium text-foreground">{exp.company}</span>
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-1">
+                                  <MapPin className="h-4 w-4" />
+                                  <span>{exp.location}</span>
+                                </div>
+                                <div className="flex items-center gap-1 text-primary">
+                                  <CalendarDays className="h-4 w-4" />
+                                  <span className="font-medium">{exp.period}</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                            {exp.description}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {exp.technologies.map((tech) => (
+                              <Badge key={tech} variant="secondary" className="hover-lift">
+                                {tech}
+                              </Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {exp.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="hover-lift">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Education Section */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-8 text-center">Education</h3>
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {education.map((edu, index) => (
-              <Card key={index} className="project-card hover-lift">
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div className="flex items-start gap-4">
-                      {edu.logo && (
-                        <div className="flex-shrink-0">
-                          <img
-                            src={edu.logo}
-                            alt={`${edu.institution} logo`}
-                            className="w-12 h-12 object-contain rounded-lg bg-white p-1"
-                          />
-                        </div>
-                      )}
-                      <div>
-                        <CardTitle className="text-xl mb-2">{edu.degree}</CardTitle>
-                        <div className="flex items-center gap-4 text-muted-foreground">
-                          <span className="font-medium">{edu.institution}</span>
-                          {edu.location && (
-                            <div className="flex items-center gap-1">
-                              <MapPin className="h-4 w-4" />
-                              <span className="text-sm">{edu.location}</span>
+          {/* Education Column */}
+          <div className="space-y-8">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-3 bg-primary/10 rounded-full">
+                <GraduationCap className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-2xl font-semibold">Education</h3>
+            </div>
+            
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border"></div>
+              
+              <div className="space-y-8">
+                {education.map((edu, index) => (
+                  <div key={index} className="relative">
+                    {/* Timeline dot */}
+                    <div className={`absolute left-4 w-4 h-4 rounded-full border-4 border-background shadow-lg ${
+                      edu.type === 'degree' ? 'bg-blue-500' : 
+                      edu.type === 'bootcamp' ? 'bg-green-500' : 'bg-orange-500'
+                    }`}></div>
+                    
+                    <div className="ml-14">
+                      <Card className="project-card hover-lift">
+                        <CardHeader className="pb-4">
+                          <div className="flex items-start gap-4">
+                            {edu.logo && (
+                              <div className="flex-shrink-0">
+                                <img
+                                  src={edu.logo}
+                                  alt={`${edu.institution} logo`}
+                                  className="w-12 h-12 object-contain rounded-lg bg-white p-1"
+                                />
+                              </div>
+                            )}
+                            <div className="flex-1">
+                              <CardTitle className="text-xl mb-2">{edu.degree}</CardTitle>
+                              <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+                                <span className="font-medium text-foreground">{edu.institution}</span>
+                                {edu.location && (
+                                  <div className="flex items-center gap-1">
+                                    <MapPin className="h-4 w-4" />
+                                    <span>{edu.location}</span>
+                                  </div>
+                                )}
+                                <div className="flex items-center gap-1 text-primary">
+                                  <CalendarDays className="h-4 w-4" />
+                                  <span className="font-medium">{edu.period}</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-muted-foreground leading-relaxed mb-4">
+                            {edu.description}
+                          </p>
+                          
+                          {edu.keySkills && (
+                            <div className="mb-4">
+                              <h4 className="font-semibold text-sm mb-3 text-primary">Key Skills & Learning:</h4>
+                              <ul className="space-y-2">
+                                {edu.keySkills.map((skill, skillIndex) => (
+                                  <li key={skillIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                    <span>{skill}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                              {edu.note && (
+                                <p className="mt-3 text-sm italic text-primary/80 border-l-2 border-primary/20 pl-3">
+                                  {edu.note}
+                                </p>
+                              )}
                             </div>
                           )}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-1 text-primary">
-                      <CalendarDays className="h-4 w-4" />
-                      <span className="text-sm font-medium">{edu.period}</span>
+                          
+                          {edu.courses && (
+                            <div className="mb-4">
+                              <h4 className="font-semibold text-sm mb-3 text-primary">Core Courses:</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {edu.courses.map((course: string) => (
+                                  <span key={course} className="inline-block rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 px-3 py-1 text-xs font-medium border border-blue-500/20 hover:bg-blue-500/20 transition-colors cursor-default">
+                                    {course}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                          
+                          {edu.technologies && (
+                            <div>
+                              <h4 className="font-semibold text-sm mb-3 text-primary">Technologies:</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {edu.technologies.map((tech: string) => (
+                                  <Badge key={tech} variant="outline" className="text-xs">
+                                    {tech}
+                                  </Badge>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </CardContent>
+                      </Card>
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed mb-2">
-                    {edu.description}
-                  </p>
-                  {edu.courses && (
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {edu.courses.map((course: string) => (
-                        <span key={course} className="inline-block rounded bg-primary/10 text-primary px-3 py-1 text-xs font-medium border border-primary/20 hover:bg-primary/20 transition-colors cursor-default">
-                          {course}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  {edu.technologies && (
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {edu.technologies.map((tech: string) => (
-                        <span key={tech} className="inline-block rounded bg-primary/10 text-primary px-3 py-1 text-xs font-medium border border-primary/20 hover:bg-primary/20 transition-colors cursor-default">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
