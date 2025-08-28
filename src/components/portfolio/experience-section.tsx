@@ -37,7 +37,7 @@ const education = [
   {
     degree: "ALX Software Engineering Program",
     institution: "ALX Africa",
-    period: "2024 - Present",
+    period: "April 2025 - August 2025",
     description: "Intensive software engineering program focusing on backend development, DevOps practices, and system architecture. Building scalable, secure, and maintainable systems through hands-on projects and real-world applications.",
     logo: "/alx.png",
     type: "bootcamp",

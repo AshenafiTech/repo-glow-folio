@@ -85,12 +85,12 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
       <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 hero-text-gradient">
-            My Projects
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 hero-text-gradient">
+            Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my work across fullstack development, backend & cloud systems, and data science
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A curated collection of projects showcasing expertise in backend development, cloud infrastructure, and data science solutions
           </p>
         </div>
         
@@ -161,8 +161,13 @@ export function ProjectsSection() {
         </div> */}
 
         {/* Backend & Cloud Projects */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Backend & Cloud Projects</h3>
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Backend & Cloud Engineering</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Scalable backend systems, DevOps automation, and cloud infrastructure projects
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             {backendProjects.map((project, index) => (
               <Card key={project.title} className="project-card hover-lift"
@@ -214,8 +219,13 @@ export function ProjectsSection() {
         </div>
 
         {/* Data Science Projects */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Data Science Projects</h3>
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Data Science & Analytics</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Machine learning models, financial analytics, and intelligent data-driven solutions
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             {dataProjects.map((project, index) => (
               <Card key={project.title} className="project-card hover-lift"
