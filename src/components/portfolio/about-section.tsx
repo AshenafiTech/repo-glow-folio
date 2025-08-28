@@ -21,13 +21,13 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold text-foreground">My Journey</h3>
               <div className="space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I am a <span className="text-primary font-semibold">Software Engineer</span> focused on cloud-native architectures and AI/ML integrations. As an <span className="text-accent font-semibold">AWS Cloud Club Captain</span>, I create educational content, provide cloud consulting, and help teams adopt scalable, AI-enabled systems.
+                  I'm a <span className="text-primary font-semibold">Software Engineering student</span> at Addis Ababa University and an <span className="text-accent font-semibold">AWS Cloud Club Captain</span>, leading a community of 300+ developers. My expertise spans backend development with Django, DevOps automation, and cloud infrastructure design.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  My passion is helping others grow and building solutions that make a real impact. I craft scalable applications using <span className="text-foreground font-semibold">JavaScript, TypeScript, Python</span>, and cloud platforms like <span className="text-foreground font-semibold">AWS, GCP, and Azure</span>.
+                  Currently completing the <span className="text-foreground font-semibold">ALX Software Engineering Program</span>, where I'm mastering scalable backend systems, containerization with Docker & Kubernetes, and API design with REST and GraphQL. I hold multiple <span className="text-foreground font-semibold">AWS certifications</span> including Cloud Practitioner and Solutions Architect Associate.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I enjoy collaborating with diverse teams, sharing knowledge, and supporting the next generation of tech talent. My approach combines technical expertise with a strong sense of community and continuous learning.
+                  As a <span className="text-primary font-semibold">Machine Learning Intern at iCog Labs</span>, I've worked on AI-powered systems and contributed to cutting-edge research. My passion lies in building systems that are not just functional, but scalable, secure, and maintainable.
                 </p>
               </div>
             </div>
@@ -57,9 +57,9 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold text-foreground mb-6">What I Do Best</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {[
-                  "Cloud Architecture", "System Design", "DevOps",
-                  "Microservices", "Infrastructure as Code", "CI/CD", 
-                  "Agile Development", "Team Leadership", "Mentoring"
+                  "Backend Development", "Cloud Architecture", "DevOps & CI/CD",
+                  "Microservices", "Docker & Kubernetes", "AWS Solutions", 
+                  "Machine Learning", "API Design", "System Design"
                 ].map((skill, index) => (
                   <Badge 
                     key={index} 
@@ -77,15 +77,15 @@ export function AboutSection() {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  Building AI-powered cloud applications
+                  Completing ALX Software Engineering Program (Backend & DevOps)
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  Leading AWS Cloud Club community initiatives
+                  Leading AWS Cloud Club community with 300+ developers
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  Creating educational content and tutorials about cloud and AI for developers
+                  Building AI-powered systems and contributing to ML research at iCog Labs
                 </li>
               </ul>
             </div>

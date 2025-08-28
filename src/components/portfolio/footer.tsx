@@ -10,10 +10,10 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="font-bold text-xl hero-text-gradient">
-              Ashenafi
+              AshenafiTech
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Software Engineer specializing in cloud-native technologies and AI. AWS Cloud Club Captain, mentor, and community builder. Passionate about helping others grow and building scalable solutions that make a real impact.
+              Software Engineering student and AWS Cloud Club Captain specializing in backend development, DevOps automation, and cloud infrastructure. Building scalable, secure systems while mentoring the next generation of developers.
             </p>
             <div className="flex space-x-4">
               <a href="https://github.com/AshenafiTech" target="_blank" rel="noopener noreferrer"
@@ -69,12 +69,12 @@ export function Footer() {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-muted-foreground text-sm">
-              © {currentYear} Ashenafi Godanaj. All rights reserved.
+              © {currentYear} AshenafiTech. All rights reserved.
             </div>
             <div className="flex items-center space-x-1 text-muted-foreground text-sm">
               <span>Made with</span>
               <Heart className="h-4 w-4 text-red-500" />
-              <span>by Ashenafi — Cloud, AI & Community</span>
+              <span>by AshenafiTech — Backend, Cloud & AI</span>
             </div>
           </div>
         </div>

@@ -73,11 +73,11 @@ export function ContactSection() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="animate-fade-in">
-              <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Whether you have a project in mind, need a speaker for your event,
-                want to explore collaboration opportunities, or just want to connect -
-                I'm here and ready to help bring your vision to life.
+                Whether you're looking for a skilled backend developer, need cloud architecture guidance, 
+                want to collaborate on AI/ML projects, or seeking a tech speaker for your event - 
+                I'm excited to discuss how we can work together to build something amazing.
               </p>
             </div>
 
@@ -133,10 +133,11 @@ export function ContactSection() {
                 <span className="text-sm font-medium">Available for new projects</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Remote Work</Badge>
-                <Badge variant="secondary">Full-time</Badge>
-                <Badge variant="secondary">Contract</Badge>
-                <Badge variant="secondary">Consulting</Badge>
+                <Badge variant="secondary">Backend Development</Badge>
+                <Badge variant="secondary">Cloud Consulting</Badge>
+                <Badge variant="secondary">DevOps Solutions</Badge>
+                <Badge variant="secondary">AI/ML Projects</Badge>
+                <Badge variant="secondary">Tech Speaking</Badge>
               </div>
             </div>
           </div>
