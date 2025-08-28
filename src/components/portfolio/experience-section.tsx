@@ -43,12 +43,9 @@ const education = [
     type: "bootcamp",
     keySkills: [
       "Backend development with Django",
-      "Performance optimization and security best practices",
-      "DevOps & CI/CD using GitHub Actions, Docker, Kubernetes, and Bash scripting",
-      "Caching & data management with Redis",
+      "DevOps & CI/CD using Docker, Kubernetes",
       "API design with REST and GraphQL",
-      "Web server deployment with Nginx",
-      "Testing & automation to ensure reliability"
+      "Testing & automation for reliability"
     ],
     note: "Learning not just how to build systems that work, but systems that are scalable, secure, and maintainable.",
     technologies: ["Django", "Docker", "Kubernetes", "Redis", "GraphQL", "Nginx", "GitHub Actions", "Bash"]
