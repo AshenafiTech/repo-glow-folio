@@ -14,7 +14,7 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+  <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">

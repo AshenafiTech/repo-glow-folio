@@ -13,7 +13,6 @@ export function HeroSection() {
     { icon: Linkedin, href: "https://www.linkedin.com/in/ashenafig/", label: "LinkedIn" },
     { icon: Github, href: "https://github.com/AshenafiTech", label: "GitHub" },
   { icon: XLogo, href: "https://x.com/AshenafiGodana", label: "X" },
-  { icon: Instagram, href: "https://www.instagram.com/ashenafi_5/", label: "Instagram" },
     { icon: Youtube, href: "https://youtube.com/@ashenafi", label: "YouTube" },
     { icon: Award, href: "https://www.credly.com/users/ashenafi-godana/badges#credly", label: "Credly" },
   ]
@@ -27,7 +26,7 @@ export function HeroSection() {
         {/* Centered content: wider than default but constrained to avoid horizontal scroll */}
         <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
           <div className="w-full">
-            <div className="grid lg:grid-cols-2 gap-20 items-center w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-14 lg:gap-20 items-center w-full">
               {/* Left Content */}
               <div className="space-y-10">
                 <div className="space-y-8">
@@ -46,7 +45,7 @@ export function HeroSection() {
                     </h1>
                   </div>
                   <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
-                    Architecting <span className="text-primary font-semibold">cloud-native platforms</span>, engineering <span className="text-foreground font-semibold">robust backends</span>, and building <span className="text-accent font-semibold">AI solutions</span>—all with a passion for modern, scalable development.
+                    Working with Python, backend development, and cloud on <span className="text-primary font-semibold">AWS</span>. Building projects and continuously learning new technologies.
                   </p>
                 </div>
                 {/* Action Buttons */}
@@ -89,7 +88,7 @@ export function HeroSection() {
                     <div className="w-full h-full bg-background rounded-full"></div>
                   </div>
                   {/* Photo Container */}
-                  <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 shadow-vibrant group-hover:shadow-glow transition-all duration-500 group-hover:scale-105">
+                  <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 shadow-vibrant group-hover:shadow-glow transition-all duration-500 group-hover:scale-105">
                     <img
                       src={heroPhoto}
                       alt="Ashenafi - Software Engineer"
@@ -103,7 +102,7 @@ export function HeroSection() {
                   <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary rounded-full animate-bounce shadow-glow" style={{animationDelay: '1s'}}></div>
                 </div>
                 {/* Social Links - moved under image, shifted left */}
-                <div className="flex flex-row items-center justify-center gap-4 mt-6 lg:ml-16">
+                <div className="flex flex-row items-center justify-center gap-2 sm:gap-3 md:gap-4 mt-4 sm:mt-6 lg:ml-16">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}

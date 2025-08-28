@@ -166,7 +166,7 @@ export function SkillsSection() {
 
 	return (
 		<section id="skills" className="py-20 relative overflow-hidden">
-			<div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
+			<div className="relative z-10 w-full px-2 sm:px-4 md:px-6 mx-auto max-w-[1400px]">
 				<div className="text-center mb-12">
 					<h2 className="text-3xl md:text-4xl font-bold mb-3 hero-text-gradient">Skills & Technologies</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">A comprehensive toolkit for building modern digital solutions</p>
@@ -196,7 +196,7 @@ export function SkillsSection() {
 								})}
 							</div>
 						</div>
-				<div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
+				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
 					{skillCategories.map((category, index) => (
 						<Card key={category.title} className="project-card hover-lift" style={{ animationDelay: `${index * 0.1}s` }}>
 							<CardContent className="p-4 text-center">

@@ -4,11 +4,11 @@ import { CalendarDays, MapPin } from "lucide-react"
 
 const experiences = [
   {
-    title: "AI Intern",
+  title: "Machine Learning Intern",
     company: "iCog Labs",
     location: "Addis Ababa, Ethiopia",
     period: "July 2024 - Oct 2024", // Update period as needed
-    description: "As an AI Intern at iCog Labs, I focused on testing and containerizing web applications and machine learning models, implementing Retrieval-Augmented Generation (RAG) systems, and contributing to research and development in emerging AI technologies.",
+  description: "As a Machine Learning Intern at iCog Labs, I focused on testing and containerizing web applications and machine learning models, implementing Retrieval-Augmented Generation (RAG) systems, and contributing to research and development in emerging AI technologies.",
     technologies: ["Python", "Docker", "Machine Learning", "RAG", "AI Research"]
   }
 ]

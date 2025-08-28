@@ -27,12 +27,6 @@ export function CertificationsSection() {
       link: "https://drive.google.com/file/d/1yh9_fkUCudY7VDl0eI-RIiHGS90_J5Ab/view?usp=sharing",
       image: "/kcna.png"
     },
-    {
-      name: "AWS Cloud Clubs Captain",
-      issuer: "Amazon Web Services",
-      link: "https://www.credly.com/badges/0d2117ef-f462-463a-bdbf-2b8b900387c3",
-      image: "/captain.jpg"
-    }
   ]
 
   return (
