@@ -193,7 +193,7 @@
   
   /* Professional animations */
   .hover-lift {
-    @apply transition-all duration-200 hover:translate-y-[-2px] hover:shadow-elegant;
+    @apply transition-all duration-200 hover:translate-y-[-2px] hover:shadow-lg;
   }
   
   .hover-glow {
@@ -201,7 +201,7 @@
   }
   
   .project-card {
-    @apply relative overflow-hidden rounded-xl bg-card border border-border transition-all duration-200 hover:border-primary/20 hover:shadow-elegant hover:translate-y-[-2px];
+    @apply relative overflow-hidden rounded-xl bg-card border border-border transition-all duration-200 hover:border-primary/20 hover:shadow-lg hover:translate-y-[-2px];
   }
   
   .project-card::before {
