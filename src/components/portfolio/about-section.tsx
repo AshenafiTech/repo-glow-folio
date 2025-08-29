@@ -3,14 +3,14 @@ import { Badge } from "@/components/ui/badge"
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 relative overflow-hidden w-full">
+    <section id="about" className="py-20 relative overflow-hidden w-full bg-muted/20">
       <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             About Me
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Passionate about building cloud-native and AI-driven solutions that make a difference
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Professional software engineer specializing in cloud architecture and scalable solutions
           </p>
         </div>
 
@@ -32,21 +32,21 @@ export function AboutSection() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
-              <div className="group p-6 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border hover:shadow-vibrant transition-all duration-300 hover:scale-105">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-white font-bold">⚡</span>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="group p-5 rounded-xl bg-card border border-border hover:border-primary/20 hover:shadow-elegant transition-all duration-200 hover:translate-y-[-2px]">
+                <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
+                  <span className="text-primary font-semibold text-sm">⚡</span>
                 </div>
-                <h4 className="text-lg font-bold text-foreground mb-2">Fast Learner</h4>
-                <p className="text-sm text-muted-foreground">Quickly adapting to new technologies and frameworks</p>
+                <h4 className="text-base font-semibold text-foreground mb-2">Fast Learner</h4>
+                <p className="text-sm text-muted-foreground">Quickly adapting to new technologies</p>
               </div>
               
-              <div className="group p-6 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border hover:shadow-vibrant transition-all duration-300 hover:scale-105">
-                <div className="w-10 h-10 bg-gradient-to-br from-secondary to-secondary-glow rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-white font-bold">🎯</span>
+              <div className="group p-5 rounded-xl bg-card border border-border hover:border-primary/20 hover:shadow-elegant transition-all duration-200 hover:translate-y-[-2px]">
+                <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center mb-3">
+                  <span className="text-accent font-semibold text-sm">🎯</span>
                 </div>
-                <h4 className="text-lg font-bold text-foreground mb-2">Goal-Oriented</h4>
-                <p className="text-sm text-muted-foreground">Focused on delivering impactful solutions</p>
+                <h4 className="text-base font-semibold text-foreground mb-2">Goal-Oriented</h4>
+                <p className="text-sm text-muted-foreground">Focused on delivering results</p>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ export function AboutSection() {
                   <Badge 
                     key={index} 
                     variant="secondary" 
-                    className="hover-lift text-center py-2 px-3 justify-center bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                    className="text-center py-2 px-3 justify-center bg-primary/5 border border-primary/10 hover:border-primary/20 hover:bg-primary/10 transition-all duration-200 hover:translate-y-[-1px] text-primary font-medium"
                   >
                     {skill}
                   </Badge>
@@ -72,20 +72,20 @@ export function AboutSection() {
               </div>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 border border-primary/20">
-              <h4 className="text-xl font-bold text-foreground mb-4">Current Focus</h4>
+            <div className="p-6 rounded-xl bg-card border border-border">
+              <h4 className="text-lg font-semibold text-foreground mb-4">Current Focus</h4>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  Completing ALX Software Engineering Program (Backend & DevOps)
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  Leading AWS Cloud Club community with 300+ developers
+                  <span className="text-sm">Completing ALX Software Engineering Program</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  Building AI-powered systems and contributing to ML research at iCog Labs
+                  <span className="text-sm">Leading AWS Cloud Club with 300+ developers</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span className="text-sm">Building AI-powered systems at iCog Labs</span>
                 </li>
               </ul>
             </div>

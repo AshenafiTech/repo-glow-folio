@@ -19,10 +19,10 @@ export function HeroSection() {
 
     return (
   <section className="min-h-screen w-full flex items-center justify-center bg-background py-20 relative overflow-hidden">
-        {/* Animated Background - full width */}
-    <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 animate-pulse opacity-70 transition-opacity duration-1000"></div>
-    <div className="absolute top-10 left-0 w-[40vw] h-[40vw] max-w-[900px] max-h-[900px] bg-primary/10 rounded-full blur-3xl animate-float opacity-40 transition-opacity duration-1000"></div>
-    <div className="absolute bottom-10 right-0 w-[50vw] h-[50vw] max-w-[1200px] max-h-[1200px] bg-secondary/10 rounded-full blur-3xl animate-float opacity-30 transition-opacity duration-1000" style={{animationDelay: '2s'}}></div>
+        {/* Subtle Professional Background */}
+    <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary/3 to-accent/3 opacity-50"></div>
+    <div className="absolute top-20 left-10 w-[300px] h-[300px] bg-primary/5 rounded-full blur-3xl opacity-30"></div>
+    <div className="absolute bottom-20 right-10 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl opacity-20"></div>
         {/* Centered content: wider than default but constrained to avoid horizontal scroll */}
         <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
           <div className="w-full">
@@ -30,29 +30,28 @@ export function HeroSection() {
               {/* Left Content */}
               <div className="space-y-10">
                 <div className="space-y-8">
-                  <div className="space-y-4">
-                    <div className="text-base md:text-lg font-semibold text-muted-foreground mb-2">Cloud & AI. Building intelligent, scalable solutions.</div>
-                    <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20">
-                      <span className="text-sm font-mono font-medium hero-text-gradient">Software Engineer</span>
+                  <div className="space-y-6">
+                    <div className="inline-flex items-center px-4 py-2 bg-primary/5 rounded-full border border-primary/10">
+                      <span className="text-sm font-medium text-primary">Software Engineer</span>
                     </div>
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                      <span className="block font-display text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">
-                        Crafting
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                      <span className="block text-foreground">
+                        Building 
                       </span>
-                      <span className="block text-foreground mt-2">
-                        <span className="font-bold text-primary">Scalable</span> solutions & <span className="font-bold text-secondary">AI-powered</span> apps
+                      <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                        Professional Solutions
                       </span>
                     </h1>
+                    <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                      Specializing in cloud architecture, backend development, and AI-powered applications with modern technologies.
+                    </p>
                   </div>
-                  <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
-                    Working with Python, backend development, and cloud on <span className="text-primary font-semibold">AWS</span>. Building projects and continuously learning new technologies.
-                  </p>
                 </div>
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-6">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
-                    className="text-lg px-10 py-7 bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white font-semibold shadow-vibrant hover:shadow-glow transition-all duration-300 hover:scale-105"
+                    className="px-8 py-6 bg-primary hover:bg-primary-dark text-primary-foreground font-medium transition-all duration-200 hover:translate-y-[-2px] shadow-elegant hover:shadow-vibrant"
                     onClick={() => {
                       const aboutSection = document.querySelector('#about')
                       if (aboutSection) {
@@ -60,13 +59,13 @@ export function HeroSection() {
                       }
                     }}
                   >
-                    <ArrowDown className="mr-3 h-5 w-5" />
-                    Explore My Work
+                    <ArrowDown className="mr-2 h-4 w-4" />
+                    View My Work
                   </Button>
                   <Button
                     variant="outline"
                     size="lg"
-                    className="text-lg px-10 py-7 border-2 border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-glow"
+                    className="px-8 py-6 border-border hover:bg-muted text-foreground font-medium transition-all duration-200 hover:translate-y-[-2px]"
                     onClick={() => {
                       const contactSection = document.querySelector('#contact')
                       if (contactSection) {
@@ -74,90 +73,83 @@ export function HeroSection() {
                       }
                     }}
                   >
-                    <Mail className="mr-3 h-5 w-5" />
-                    Let's Connect
+                    <Mail className="mr-2 h-4 w-4" />
+                    Get in Touch
                   </Button>
                 </div>
               </div>
 
-              {/* Right Content - Professional Photo */}
-              <div className="flex flex-col items-center lg:items-end justify-center gap-8">
+              {/* Right Content - Small Professional Photo */}
+              <div className="flex flex-col items-center lg:items-end justify-center gap-6">
                 <div className="relative group">
-                  {/* Glowing Ring */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent rounded-full p-1 animate-pulse">
-                    <div className="w-full h-full bg-background rounded-full"></div>
-                  </div>
-                  {/* Photo Container */}
-                  <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 shadow-vibrant group-hover:shadow-glow transition-all duration-500 group-hover:scale-105">
+                  {/* Photo Container - Smaller Size */}
+                  <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden bg-card border border-border shadow-elegant group-hover:shadow-vibrant transition-all duration-300 group-hover:translate-y-[-4px]">
                     <img
                       src={heroPhoto}
                       alt="Ashenafi - Software Engineer"
-                      className="w-full h-full object-cover object-center scale-110 transition-transform duration-500 group-hover:scale-125"
+                      className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                     />
-                    {/* Overlay Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    {/* Subtle overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent"></div>
                   </div>
-                  {/* Floating Elements */}
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-bounce shadow-glow"></div>
-                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary rounded-full animate-bounce shadow-glow" style={{animationDelay: '1s'}}></div>
                 </div>
-                {/* Social Links - moved under image, shifted left */}
-                <div className="flex flex-row items-center justify-center gap-2 sm:gap-3 md:gap-4 mt-4 sm:mt-6 lg:ml-16">
+                {/* Professional Social Links */}
+                <div className="flex flex-row items-center justify-center gap-3">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group p-3 rounded-full bg-gradient-to-br from-primary via-secondary to-accent border-2 border-primary/40 shadow-lg hover:shadow-glow transition-all duration-300 hover:scale-125"
+                      className="group p-2.5 rounded-lg bg-card border border-border hover:border-primary/20 hover:bg-primary/5 transition-all duration-200 hover:translate-y-[-2px] shadow-sm hover:shadow-elegant"
                       aria-label={social.label}
                     >
-                      <social.icon className="h-6 w-6 text-white group-hover:text-accent transition-colors drop-shadow-[0_1px_4px_rgba(0,0,0,0.25)]" />
+                      <social.icon className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                     </a>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Key Highlights Grid */}
-            <div className="mt-32 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="group p-6 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border hover:shadow-vibrant transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <span className="text-white font-bold text-lg">SE</span>
+            {/* Professional Highlights Grid */}
+            <div className="mt-24 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="group p-6 rounded-xl bg-card border border-border hover:border-primary/20 hover:shadow-elegant transition-all duration-200 hover:translate-y-[-2px]">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-primary font-semibold text-sm">SE</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 hero-text-gradient">Software Engineer</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Building scalable applications with modern tech stacks, focusing on performance and user experience.
+                <h3 className="text-lg font-semibold text-foreground mb-2">Software Engineer</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Building scalable applications with modern tech stacks and best practices.
                 </p>
               </div>
 
-              <div className="group p-6 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border hover:shadow-vibrant transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-glow rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <span className="text-white font-bold text-lg">☁️</span>
+              <div className="group p-6 rounded-xl bg-card border border-border hover:border-primary/20 hover:shadow-elegant transition-all duration-200 hover:translate-y-[-2px]">
+                <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-accent font-semibold text-sm">☁️</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Cloud Architect</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Designing and implementing cloud-native solutions with AWS, mentoring teams on best practices.
+                <h3 className="text-lg font-semibold text-foreground mb-2">Cloud Architect</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Designing cloud-native solutions with AWS and modern infrastructure.
                 </p>
               </div>
 
-              <div className="group p-6 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border hover:shadow-vibrant transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent-glow rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <span className="text-white font-bold text-lg">🚀</span>
+              <div className="group p-6 rounded-xl bg-card border border-border hover:border-primary/20 hover:shadow-elegant transition-all duration-200 hover:translate-y-[-2px]">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-primary font-semibold text-sm">🚀</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Community Leader</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  AWS Cloud Captain leading 300+ developers, organizing workshops and speaking at tech events.
+                <h3 className="text-lg font-semibold text-foreground mb-2">Community Leader</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Leading 300+ developers as AWS Cloud Captain and organizing events.
                 </p>
               </div>
 
-              <div className="group p-6 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border hover:shadow-vibrant transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <span className="text-white font-bold text-lg">🤝</span>
+              <div className="group p-6 rounded-xl bg-card border border-border hover:border-primary/20 hover:shadow-elegant transition-all duration-200 hover:translate-y-[-2px]">
+                <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-accent font-semibold text-sm">🎓</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Mentor & Educator</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Dedicated to sharing cloud expertise, guiding others in modern tech, and empowering learners in digital innovation.
+                <h3 className="text-lg font-semibold text-foreground mb-2">Educator</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Sharing knowledge and mentoring developers in cloud technologies.
                 </p>
               </div>
             </div>

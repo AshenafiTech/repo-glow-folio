@@ -35,14 +35,14 @@ export function Navigation() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"
+      isScrolled ? "bg-background/95 backdrop-blur-lg border-b border-border shadow-elegant" : "bg-transparent"
     }`}>
       {/* Navigation aligned to the same centered container as the hero (max-w-[1400px] px-6) */}
       <div className="w-full">
         <div className="mx-auto max-w-[1400px] w-full px-6">
           <div className="relative h-16 w-full">
             {/* Left: Logo aligned to container left edge */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 font-bold text-xl hero-text-gradient">Ashenafi</div>
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 font-bold text-xl text-foreground">AshenafiTech</div>
 
             {/* Center: Desktop Navigation (centered) */}
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center space-x-8">
@@ -50,7 +50,7 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
                 >
                   {item.name}
                 </button>
