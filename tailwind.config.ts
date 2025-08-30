@@ -139,10 +139,9 @@ export default {
 				'exit': 'fade-out 0.3s ease-out, scale-out 0.2s ease-out'
 			},
 			boxShadow: {
-				'glow': '0 0 20px hsl(var(--primary) / 0.3)',
-				'vibrant': '0 8px 25px -8px hsl(var(--primary) / 0.2)',
-				'elegant': '0 4px 20px -4px hsl(var(--primary) / 0.15)',
-				'soft': '0 4px 6px -1px hsl(0 0% 0% / 0.1)'
+				'glow': 'var(--shadow-glow)',
+				'vibrant': 'var(--shadow-vibrant)',
+				'soft': 'var(--shadow-md)'
 			}
 		}
 	},
