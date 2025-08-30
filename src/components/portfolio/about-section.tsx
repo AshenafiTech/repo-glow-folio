@@ -3,98 +3,91 @@ import { Badge } from "@/components/ui/badge"
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-4xl">
-        {/* About Me Title */}
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-primary rounded mx-auto"></div>
+    <section id="about" className="py-20 relative overflow-hidden w-full bg-muted/20">
+      <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            About Me
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Professional software engineer specializing in cloud architecture and scalable solutions
+          </p>
         </div>
 
-      {/* About Content */}
-      <div className="space-y-6 text-muted-foreground leading-relaxed">
-        <p>
-          A passionate and skilled Software Engineer with a strong background in cloud architecture, 
-          backend development, and AI-powered applications. I am currently a Software Engineering 
-          student at Addis Ababa University and an AWS Cloud Club Captain, leading a community of 300+ developers.
-        </p>
-        
-        <p>
-          I have experience working with modern technologies such as Django, FastAPI, Docker, and 
-          Kubernetes to build scalable applications and streamline development processes. Proficient 
-          in managing and monitoring cloud infrastructure services on AWS, as well as implementing 
-          DevOps practices and CI/CD pipelines.
-        </p>
-        
-        <p>
-          Currently completing the ALX Software Engineering Program, where I'm mastering backend 
-          systems, containerization, and API design. As a Machine Learning Intern at iCog Labs, 
-          I've contributed to cutting-edge AI research and development.
-        </p>
-      </div>
-
-      {/* What I'm Doing Section */}
-      <div className="mt-12">
-        <h3 className="text-2xl font-bold text-foreground mb-6">What I'm Doing</h3>
-        
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* DevOps Card */}
-          <div className="p-6 rounded-xl bg-card/50 border border-border hover:border-primary/20 transition-all duration-200">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl">⚙️</span>
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold text-foreground mb-2">DevOps</h4>
-                <p className="text-muted-foreground">
-                  I enjoy to improve the speed and quality of delivery, automate and achieve CI/CD
+  <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-foreground">My Journey</h3>
+              <div className="space-y-4">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I'm a <span className="text-primary font-semibold">Software Engineering student</span> at Addis Ababa University and an <span className="text-accent font-semibold">AWS Cloud Club Captain</span>, leading a community of 300+ developers. My expertise spans backend development with Django, DevOps automation, and cloud infrastructure design.
                 </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Currently completing the <span className="text-foreground font-semibold">ALX Software Engineering Program</span>, where I'm mastering scalable backend systems, containerization with Docker & Kubernetes, and API design with REST and GraphQL. I hold multiple <span className="text-foreground font-semibold">AWS certifications</span> including Cloud Practitioner and Solutions Architect Associate.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  As a <span className="text-primary font-semibold">Machine Learning Intern at iCog Labs</span>, I've worked on AI-powered systems and contributed to cutting-edge research. My passion lies in building systems that are not just functional, but scalable, secure, and maintainable.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="group p-5 rounded-xl bg-card border border-border hover:border-primary/20 hover:shadow-elegant transition-all duration-200 hover:translate-y-[-2px]">
+                <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
+                  <span className="text-primary font-semibold text-sm">⚡</span>
+                </div>
+                <h4 className="text-base font-semibold text-foreground mb-2">Fast Learner</h4>
+                <p className="text-sm text-muted-foreground">Quickly adapting to new technologies</p>
+              </div>
+              
+              <div className="group p-5 rounded-xl bg-card border border-border hover:border-primary/20 hover:shadow-elegant transition-all duration-200 hover:translate-y-[-2px]">
+                <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center mb-3">
+                  <span className="text-accent font-semibold text-sm">🎯</span>
+                </div>
+                <h4 className="text-base font-semibold text-foreground mb-2">Goal-Oriented</h4>
+                <p className="text-sm text-muted-foreground">Focused on delivering results</p>
               </div>
             </div>
           </div>
 
-          {/* Cloud Engineer Card */}
-          <div className="p-6 rounded-xl bg-card/50 border border-border hover:border-primary/20 transition-all duration-200">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl">☁️</span>
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold text-foreground mb-2">Cloud Engineer</h4>
-                <p className="text-muted-foreground">
-                  I enjoy design, secure and maintenance of an organization's cloud-based infrastructure and application
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Software Engineer Card */}
-          <div className="p-6 rounded-xl bg-card/50 border border-border hover:border-primary/20 transition-all duration-200">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl">👨‍💻</span>
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold text-foreground mb-2">Software Engineer</h4>
-                <p className="text-muted-foreground">
-                  Building scalable applications with modern tech stacks and best practices
-                </p>
+          {/* Right Content - Skills Grid */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-6">What I Do Best</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {[
+                  "Backend Development", "Cloud Architecture", "DevOps & CI/CD",
+                  "Microservices", "Docker & Kubernetes", "AWS Solutions", 
+                  "Machine Learning", "API Design", "System Design"
+                ].map((skill, index) => (
+                  <Badge 
+                    key={index} 
+                    variant="secondary" 
+                    className="text-center py-2 px-3 justify-center bg-primary/5 border border-primary/10 hover:border-primary/20 hover:bg-primary/10 transition-all duration-200 hover:translate-y-[-1px] text-primary font-medium"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
               </div>
             </div>
-          </div>
 
-          {/* Community Leader Card */}
-          <div className="p-6 rounded-xl bg-card/50 border border-border hover:border-primary/20 transition-all duration-200">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl">🚀</span>
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold text-foreground mb-2">Community Leader</h4>
-                <p className="text-muted-foreground">
-                  Leading 300+ developers as AWS Cloud Captain and organizing tech events
-                </p>
-              </div>
+            <div className="p-6 rounded-xl bg-card border border-border">
+              <h4 className="text-lg font-semibold text-foreground mb-4">Current Focus</h4>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span className="text-sm">Completing ALX Software Engineering Program</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-accent rounded-full"></div>
+                  <span className="text-sm">Leading AWS Cloud Club with 300+ developers</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span className="text-sm">Building AI-powered systems at iCog Labs</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
