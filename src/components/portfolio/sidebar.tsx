@@ -1,12 +1,15 @@
-import { User, FileText, FolderOpen, BookOpen, MessageSquare, Award } from "lucide-react"
+import { User, FileText, FolderOpen, BookOpen, MessageSquare, Award, Briefcase, Code } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
   { name: "About", href: "#about", icon: User },
-  { name: "Resume", href: "#resume", icon: FileText },
+  { name: "Skills", href: "#skills", icon: Code },
+  { name: "Experience", href: "#experience", icon: Briefcase },
   { name: "Portfolio", href: "#portfolio", icon: FolderOpen },
+  { name: "Certifications", href: "#certifications", icon: Award },
   { name: "Blog", href: "#blog", icon: BookOpen },
   { name: "Contact", href: "#contact", icon: MessageSquare },
+  { name: "Resume", href: "#resume", icon: FileText },
 ]
 
 export function Sidebar() {
@@ -24,33 +27,46 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="w-16 md:w-20 lg:w-24 bg-card/50 backdrop-blur-sm border-r border-border flex flex-col items-center py-8 sticky top-0 h-screen">
+    <aside className="w-20 lg:w-64 bg-card/50 backdrop-blur-sm border-r border-border flex flex-col py-8 sticky top-0 h-screen">
       {/* Logo */}
-      <div className="mb-8">
-        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-xl flex items-center justify-center">
-          <span className="text-primary-foreground font-bold text-lg md:text-xl">A</span>
+      <div className="mb-8 px-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+            <span className="text-primary-foreground font-bold text-lg">A</span>
+          </div>
+          <div className="hidden lg:block">
+            <h1 className="font-bold text-lg text-foreground">Ashenafi</h1>
+            <p className="text-sm text-muted-foreground">Portfolio</p>
+          </div>
         </div>
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 space-y-2">
+      <nav className="flex-1 space-y-1 px-3">
         {navItems.map((item) => (
           <Button
             key={item.name}
             variant="ghost"
-            size="sm"
-            className="w-12 h-12 md:w-14 md:h-14 p-0 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 group"
+            className="w-full justify-start h-12 px-3 lg:px-4 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 group"
             onClick={() => scrollToSection(item.href)}
-            aria-label={item.name}
           >
-            <item.icon className="h-5 w-5 md:h-6 md:w-6" />
+            <item.icon className="h-5 w-5 flex-shrink-0" />
+            <span className="hidden lg:block ml-3 text-sm font-medium">{item.name}</span>
+            
+            {/* Tooltip for mobile */}
+            <div className="lg:hidden absolute left-20 bg-popover text-popover-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50 whitespace-nowrap border border-border shadow-md">
+              {item.name}
+            </div>
           </Button>
         ))}
       </nav>
 
       {/* Status indicator */}
-      <div className="mt-auto">
-        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+      <div className="px-4 mt-auto">
+        <div className="flex items-center gap-3">
+          <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></div>
+          <span className="hidden lg:block text-sm text-muted-foreground">Available for work</span>
+        </div>
       </div>
     </aside>
   )
