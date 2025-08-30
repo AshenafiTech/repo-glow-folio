@@ -1,22 +1,32 @@
-import { User, FileText, FolderOpen, BookOpen, MessageSquare, Award, Briefcase, Code } from "lucide-react"
+import { User, FileText, FolderOpen, BookOpen, MessageSquare, Award, Briefcase, Code, Users, Sun, Moon } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useTheme } from "@/components/theme-provider"
 
 const navItems = [
   { name: "About", href: "#about", icon: User },
+  { name: "Certifications", href: "#certifications", icon: Award },
   { name: "Skills", href: "#skills", icon: Code },
   { name: "Experience", href: "#experience", icon: Briefcase },
   { name: "Portfolio", href: "#portfolio", icon: FolderOpen },
-  { name: "Certifications", href: "#certifications", icon: Award },
+  { name: "Community", href: "#community", icon: Users },
   { name: "Blog", href: "#blog", icon: BookOpen },
   { name: "Contact", href: "#contact", icon: MessageSquare },
   { name: "Resume", href: "#resume", icon: FileText },
 ]
 
 export function Sidebar() {
+  const { theme, setTheme } = useTheme()
+  
   const scrollToSection = (href: string) => {
     if (href === "#resume") {
-      // Download resume
-      window.open("/Ashenafi_Resume.pdf", "_blank")
+      // Download resume - using the correct path from public folder
+      const link = document.createElement('a')
+      link.href = "/Ashenafi_Resume.pdf"
+      link.download = "Ashenafi_Resume.pdf"
+      link.target = "_blank"
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
       return
     }
     
@@ -61,8 +71,31 @@ export function Sidebar() {
         ))}
       </nav>
 
-      {/* Status indicator */}
-      <div className="px-4 mt-auto">
+      {/* Theme Toggle & Status */}
+      <div className="px-4 mt-auto space-y-3">
+        {/* Theme Toggle */}
+        <Button
+          variant="ghost"
+          size="sm"
+          className="w-full justify-start h-10 px-3 lg:px-4 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 group"
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        >
+          {theme === "light" ? (
+            <Moon className="h-4 w-4 flex-shrink-0" />
+          ) : (
+            <Sun className="h-4 w-4 flex-shrink-0" />
+          )}
+          <span className="hidden lg:block ml-3 text-sm font-medium">
+            {theme === "light" ? "Dark Mode" : "Light Mode"}
+          </span>
+          
+          {/* Tooltip for mobile */}
+          <div className="lg:hidden absolute left-20 bg-popover text-popover-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50 whitespace-nowrap border border-border shadow-md">
+            {theme === "light" ? "Dark Mode" : "Light Mode"}
+          </div>
+        </Button>
+
+        {/* Status indicator */}
         <div className="flex items-center gap-3">
           <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></div>
           <span className="hidden lg:block text-sm text-muted-foreground">Available for work</span>
