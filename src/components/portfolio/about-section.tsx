@@ -3,12 +3,13 @@ import { Badge } from "@/components/ui/badge"
 
 export function AboutSection() {
   return (
-    <section id="about" className="p-8">
-      {/* About Me Title */}
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-foreground mb-4">About Me</h2>
-        <div className="w-12 h-1 bg-primary rounded"></div>
-      </div>
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-4xl">
+        {/* About Me Title */}
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-4">About Me</h2>
+          <div className="w-20 h-1 bg-primary rounded mx-auto"></div>
+        </div>
 
       {/* About Content */}
       <div className="space-y-6 text-muted-foreground leading-relaxed">
