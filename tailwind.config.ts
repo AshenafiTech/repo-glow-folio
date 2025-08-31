@@ -141,6 +141,7 @@ export default {
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
 				'vibrant': 'var(--shadow-vibrant)',
+				'elegant': 'var(--shadow-elegant)',
 				'soft': 'var(--shadow-md)'
 			}
 		}
