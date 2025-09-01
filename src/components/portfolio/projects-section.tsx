@@ -11,7 +11,7 @@ const fullstackProjects = [
     description: "A startup platform that connects creators with brands for authentic collaborations, featuring matchmaking algorithms, campaign management, and performance analytics.",
     image: yenebrandImage,
     tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
-    github: "https://github.com/AshenafiTech/yenebrand",
+    github: "https://github.com/NeuralWin/yenebrand",
     demo: "https://yenebrand.vercel.app",
     category: "Fullstack"
   },
@@ -20,7 +20,7 @@ const fullstackProjects = [
     description: "An intelligent platform that helps university and college students make informed decisions about their academic departments through data-driven insights and peer reviews.",
     image: smartpathImage,
     tags: ["Next.js", "Python", "MongoDB", "Machine Learning", "Chart.js"],
-    github: "https://github.com/AshenafiTech/smartpath",
+    github: "https://github.com/NeuralWin/smartpath",
     demo: "https://smartpath.vercel.app",
     category: "Fullstack"
   }
@@ -32,7 +32,7 @@ const backendProjects = [
     description: "A comprehensive collection of system engineering and DevOps projects covering shell scripting, networking, web infrastructure, and automation.",
     image: "photo-1518432031352-d6fc5c10da5a",
     tags: ["Bash", "Python", "Nginx", "HAProxy", "MySQL", "Docker"],
-    github: "https://github.com/AshenafiTech/alx-system_engineering-devops",
+    github: "https://github.com/NeuralWin/alx-system_engineering-devops",
     category: "Backend & Cloud"
   },
   {
@@ -40,7 +40,7 @@ const backendProjects = [
     description: "A comprehensive online polling platform that allows users to create, manage, and participate in polls with real-time results and analytics.",
     image: "photo-1551288049-bebda4e38f71",
     tags: ["PHP", "MySQL", "JavaScript", "Bootstrap", "AJAX"],
-    github: "https://github.com/AshenafiTech/Online-Poll-System",
+    github: "https://github.com/NeuralWin/Online-Poll-System",
     category: "Backend & Cloud"
   },
   {
@@ -48,7 +48,7 @@ const backendProjects = [
     description: "A RESTful API for journal management built as part of the Learn to Cloud platform, featuring authentication, CRUD operations, and cloud deployment.",
     image: "photo-1481627834876-b7833e8f5570",
     tags: ["Node.js", "Express", "MongoDB", "JWT", "AWS", "Docker"],
-    github: "https://github.com/AshenafiTech/journal-api",
+    github: "https://github.com/NeuralWin/journal-api",
     category: "Backend & Cloud"
   }
 ]
@@ -59,7 +59,7 @@ const dataProjects = [
     description: "Advanced compliance analysis system for financial services using machine learning to detect regulatory violations and ensure adherence to financial standards.",
     image: "photo-1560472354-b33ff0c44a43",
     tags: ["Python", "Machine Learning", "NLP", "Pandas", "Scikit-learn", "TensorFlow"],
-    github: "https://github.com/AshenafiTech/Intelligent-Compliant-analysis-for-financial-services",
+    github: "https://github.com/NeuralWin/Intelligent-Compliant-analysis-for-financial-services",
     category: "Data Science"
   },
   {
@@ -67,7 +67,7 @@ const dataProjects = [
     description: "A sophisticated credit risk assessment model using machine learning algorithms to predict loan default probability and assess creditworthiness.",
     image: "photo-1579621970795-87facc2f976d",
     tags: ["Python", "Machine Learning", "Pandas", "Scikit-learn", "XGBoost", "Feature Engineering"],
-    github: "https://github.com/AshenafiTech/credit-risk-model",
+    github: "https://github.com/NeuralWin/credit-risk-model",
     category: "Data Science"
   },
   {
@@ -75,7 +75,7 @@ const dataProjects = [
     description: "Comprehensive insurance analytics platform providing insights into claims processing, risk assessment, and customer behavior analysis.",
     image: "photo-1450101499163-c8848c66ca85",
     tags: ["Python", "Data Analytics", "Pandas", "Matplotlib", "Seaborn", "Statistical Analysis"],
-    github: "https://github.com/AshenafiTech/end-to-end-insurance-analytics",
+    github: "https://github.com/NeuralWin/end-to-end-insurance-analytics",
     category: "Data Science"
   }
 ]
@@ -271,7 +271,7 @@ export function ProjectsSection() {
         
         <div className="text-center mt-12">
           <a 
-            href="https://github.com/AshenafiTech" 
+            href="https://github.com/NeuralWin" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 hover-lift pointer-events-auto"
