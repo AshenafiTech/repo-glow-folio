@@ -5,10 +5,9 @@ import { Menu, X, Download } from "lucide-react"
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Blog", href: "#blogs" },
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -35,48 +34,45 @@ export function Navigation() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/95 backdrop-blur-lg border-b border-border shadow-elegant" : "bg-transparent"
+      isScrolled ? "bg-black/90 backdrop-blur-lg" : "bg-transparent"
     }`}>
-      {/* Navigation aligned to the same centered container as the hero (max-w-[1400px] px-6) */}
       <div className="w-full">
-        <div className="mx-auto max-w-[1400px] w-full px-6">
-          <div className="relative h-16 w-full">
-            {/* Left: Logo aligned to container left edge */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 font-bold text-xl text-foreground">AshenafiTech</div>
+        <div className="mx-auto max-w-7xl w-full px-6">
+          <div className="flex justify-between items-center h-16">
+            {/* Left: Logo */}
+            <div className="font-bold text-xl text-white">
+              AshenafiTech
+            </div>
 
-            {/* Center: Desktop Navigation (centered) */}
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center space-x-8">
+            {/* Center: Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                  className="text-white/80 hover:text-white transition-colors duration-200 font-medium uppercase text-sm tracking-wide"
                 >
                   {item.name}
                 </button>
               ))}
             </div>
 
-            {/* Right Side Actions: aligned to container right edge */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center space-x-4">
-              <ThemeToggle />
+            {/* Right: Contact Button */}
+            <div className="flex items-center space-x-4">
               <Button
                 variant="outline"
                 size="sm"
-                className="hidden sm:flex flex-none"
-                onClick={() => {
-                  window.open('https://drive.google.com/file/d/1FgjlHo9F1vAplOonGMEQBXix75H7Z1DK/view?usp=sharing', '_blank', 'noopener,noreferrer')
-                }}
+                className="hidden sm:flex bg-transparent border-white text-white hover:bg-white hover:text-black transition-all duration-300 uppercase font-medium tracking-wide"
+                onClick={() => scrollToSection('#contact')}
               >
-                <Download className="mr-2 h-4 w-4" />
-                Resume
+                CONTACT
               </Button>
 
               {/* Mobile Menu Button */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden"
+                className="md:hidden text-white"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
                 {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -87,13 +83,13 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden py-4 bg-black/95 backdrop-blur-md animate-fade-in">
+            <div className="flex flex-col space-y-4 px-6">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-muted-foreground hover:text-primary transition-colors py-2"
+                  className="text-left text-white/80 hover:text-white transition-colors py-2 uppercase font-medium tracking-wide"
                 >
                   {item.name}
                 </button>
@@ -101,13 +97,10 @@ export function Navigation() {
               <Button
                 variant="outline"
                 size="sm"
-                className="w-fit mt-4"
-                onClick={() => {
-                  window.open('https://docs.google.com/document/d/1HbxDzC6AspTOGhdW5pwB9NrNjUQw6BN34GN3XqnSg2E/edit?usp=sharing', '_blank', 'noopener,noreferrer')
-                }}
+                className="w-fit mt-4 bg-transparent border-white text-white hover:bg-white hover:text-black"
+                onClick={() => scrollToSection('#contact')}
               >
-                <Download className="mr-2 h-4 w-4" />
-                Resume
+                CONTACT
               </Button>
             </div>
           </div>
