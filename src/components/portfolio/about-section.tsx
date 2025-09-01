@@ -26,9 +26,6 @@ export function AboutSection() {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Currently completing the <span className="text-foreground font-semibold">ALX Software Engineering Program</span>, where I'm mastering scalable backend systems, containerization with Docker & Kubernetes, and API design with REST and GraphQL. I hold multiple <span className="text-foreground font-semibold">AWS certifications</span> including Cloud Practitioner and Solutions Architect Associate.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  As a <span className="text-primary font-semibold">Machine Learning Intern at iCog Labs</span>, I've worked on AI-powered systems and contributed to cutting-edge research. My passion lies in building systems that are not just functional, but scalable, secure, and maintainable.
-                </p>
               </div>
             </div>
 

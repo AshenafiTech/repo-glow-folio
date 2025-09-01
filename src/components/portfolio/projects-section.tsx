@@ -85,14 +85,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
       <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 hero-text-gradient">
-            Featured Projects
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A curated collection of projects showcasing expertise in backend development, cloud infrastructure, and data science solutions
-          </p>
-        </div>
+
         
         {/* Fullstack Projects - Hidden for now */}
         {/* <div className="mb-16">

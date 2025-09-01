@@ -28,8 +28,8 @@ const AboutPage = () => {
 
       <main>
         <AboutSection />
-        <SkillsSection />
         <CertificationsSection />
+        <SkillsSection />
       </main>
       <Footer />
     </div>

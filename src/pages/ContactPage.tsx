@@ -1,6 +1,5 @@
 import { Navigation } from "@/components/portfolio/navigation"
 import { ContactSection } from "@/components/portfolio/contact-section"
-import { BlogsSection } from "@/components/portfolio/blogs-section"
 import { Footer } from "@/components/portfolio/footer"
 import heroMountain from "@/assets/hero-mountain.jpg"
 
@@ -27,7 +26,6 @@ const ContactPage = () => {
 
       <main>
         <ContactSection />
-        <BlogsSection />
       </main>
       <Footer />
     </div>

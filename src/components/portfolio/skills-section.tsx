@@ -27,8 +27,7 @@ const skillCategories = [
 	{ title: "Backend & APIs", icon: Database, skills: ["Node.js", "Django", "FastAPI", "GraphQL"] },
 	{ title: "Databases", icon: Database, skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "RDS"] },
 	{ title: "Cloud Platforms", icon: Globe, skills: ["AWS", "Google Cloud", "Microsoft Azure"] },
-	{ title: "DevOps & Tools", icon: Code, skills: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD"] },
-	{ title: "Specializations", icon: Smartphone, skills: ["Cloud Architecture", "Microservices", "System Design", "MLOps"] }
+	{ title: "DevOps & Tools", icon: Code, skills: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD"] }
 ];
 
 export function SkillsSection() {
@@ -171,32 +170,8 @@ export function SkillsSection() {
 					<h2 className="text-3xl md:text-4xl font-bold mb-3 hero-text-gradient">Skills & Technologies</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">A comprehensive toolkit for building modern digital solutions</p>
 				</div>
-				{/* Scrolling marquee of tech logos - duplicated list for smooth loop */}
-						<div className="marquee-wrapper mb-8">
-							<div className="flex flex-row items-center justify-center flex-wrap">
-								{displayMarquee.map((it, i) => {
-									return (
-										<div key={i} className="inline-flex items-center justify-center flex-none m-2 p-2 bg-card/80 rounded-md border border-border" style={{width: 44, height: 44}}>
-											{it.IconComp ? (
-												<it.IconComp className="h-6 w-6" style={{color: it.color}} aria-label={it.label} />
-											) : (
-												<img
-													src={it.src}
-													alt={it.label}
-													className="h-6 w-6 object-contain"
-													loading="lazy"
-													onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-														e.currentTarget.onerror = null
-														e.currentTarget.src = '/placeholder.svg'
-													}}
-												/>
-											)}
-										</div>
-									)
-								})}
-							</div>
-						</div>
-				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+
+				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-3 md:gap-4">
 					{skillCategories.map((category, index) => (
 						<Card key={category.title} className="project-card hover-lift" style={{ animationDelay: `${index * 0.1}s` }}>
 							<CardContent className="p-4 text-center">
