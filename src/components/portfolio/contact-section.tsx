@@ -60,14 +60,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       <div className="relative z-10 w-full px-6 mx-auto max-w-[1400px]">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 hero-text-gradient">
-            Let's Work Together
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can bring your ideas to life
-          </p>
-        </div>
+        {/* ...existing code... */}
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
