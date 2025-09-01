@@ -1,14 +1,16 @@
 import { Button } from "@/components/ui/button"
-import heroPhoto from "@/assets/hero.jpg"
+import { useNavigate } from "react-router-dom"
+import heroMountain from "@/assets/hero-mountain.jpg"
 
 export function HeroSection() {
+  const navigate = useNavigate()
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Mountain/Landscape Background */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${heroPhoto})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${heroMountain})`,
         }}
       />
       
@@ -31,12 +33,7 @@ export function HeroSection() {
           <Button
             size="lg"
             className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-medium transition-all duration-300"
-            onClick={() => {
-              const aboutSection = document.querySelector('#about')
-              if (aboutSection) {
-                aboutSection.scrollIntoView({ behavior: "smooth" })
-              }
-            }}
+            onClick={() => navigate('/projects')}
           >
             PROJECTS
           </Button>
@@ -44,12 +41,7 @@ export function HeroSection() {
             variant="outline"
             size="lg"
             className="px-8 py-3 bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 font-medium transition-all duration-300"
-            onClick={() => {
-              const aboutSection = document.querySelector('#about')
-              if (aboutSection) {
-                aboutSection.scrollIntoView({ behavior: "smooth" })
-              }
-            }}
+            onClick={() => navigate('/about')}
           >
             ABOUT ME
           </Button>

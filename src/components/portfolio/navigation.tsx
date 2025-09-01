@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle" 
-import { Menu, X, Download } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { useNavigate, useLocation } from "react-router-dom"
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "Projects", href: "#projects" },
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Projects", href: "/projects" },
+  { name: "About", href: "/about" },
+  { name: "Experience", href: "/experience" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +26,8 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href === "#home" ? "#hero" : href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+  const navigateToPage = (href: string) => {
+    navigate(href)
     setIsMobileMenuOpen(false)
   }
 
@@ -40,7 +39,7 @@ export function Navigation() {
         <div className="mx-auto max-w-7xl w-full px-6">
           <div className="flex justify-between items-center h-16">
             {/* Left: Logo */}
-            <div className="font-bold text-xl text-white">
+            <div className="font-bold text-xl text-white cursor-pointer" onClick={() => navigate('/')}>
               AshenafiTech
             </div>
 
@@ -49,8 +48,12 @@ export function Navigation() {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-white/80 hover:text-white transition-colors duration-200 font-medium uppercase text-sm tracking-wide"
+                  onClick={() => navigateToPage(item.href)}
+                  className={`transition-colors duration-200 font-medium uppercase text-sm tracking-wide ${
+                    location.pathname === item.href 
+                      ? 'text-white' 
+                      : 'text-white/80 hover:text-white'
+                  }`}
                 >
                   {item.name}
                 </button>
@@ -63,7 +66,7 @@ export function Navigation() {
                 variant="outline"
                 size="sm"
                 className="hidden sm:flex bg-transparent border-white text-white hover:bg-white hover:text-black transition-all duration-300 uppercase font-medium tracking-wide"
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => navigateToPage('/contact')}
               >
                 CONTACT
               </Button>
@@ -88,8 +91,12 @@ export function Navigation() {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left text-white/80 hover:text-white transition-colors py-2 uppercase font-medium tracking-wide"
+                  onClick={() => navigateToPage(item.href)}
+                  className={`text-left transition-colors py-2 uppercase font-medium tracking-wide ${
+                    location.pathname === item.href 
+                      ? 'text-white' 
+                      : 'text-white/80 hover:text-white'
+                  }`}
                 >
                   {item.name}
                 </button>
@@ -98,7 +105,7 @@ export function Navigation() {
                 variant="outline"
                 size="sm"
                 className="w-fit mt-4 bg-transparent border-white text-white hover:bg-white hover:text-black"
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => navigateToPage('/contact')}
               >
                 CONTACT
               </Button>

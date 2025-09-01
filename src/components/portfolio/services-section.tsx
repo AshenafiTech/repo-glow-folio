@@ -8,28 +8,28 @@ export function ServicesSection() {
       subtitle: "Cloud Solutions",
       description: "Designing scalable cloud-native solutions with AWS, implementing microservices architecture, and optimizing infrastructure for performance and cost-efficiency.",
       icon: Cloud,
-      image: "/logos/aws.svg",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Development", 
       subtitle: "Full-Stack Applications",
       description: "Building modern web applications with React, TypeScript, Node.js, and Python. Creating robust APIs and database solutions.",
       icon: Code,
-      image: "/logos/react.svg",
+      image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Community Leadership",
       subtitle: "AWS Cloud Captain",
       description: "Leading 300+ developers as AWS Cloud Captain, organizing tech events, and fostering innovation in the developer community.",
       icon: Users,
-      image: "/aws-cloud-clubs.png",
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Education",
       subtitle: "Knowledge Sharing",
       description: "Mentoring developers, creating educational content, and sharing expertise in cloud technologies and software engineering best practices.",
       icon: GraduationCap,
-      image: "/logos/kubernetes.svg",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
     },
   ]
 
