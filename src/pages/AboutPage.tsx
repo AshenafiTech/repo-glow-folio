@@ -3,7 +3,9 @@ import { AboutSection } from "@/components/portfolio/about-section"
 import { SkillsSection } from "@/components/portfolio/skills-section"
 import { CertificationsSection } from "@/components/portfolio/certifications-section"
 import { Footer } from "@/components/portfolio/footer"
-import codingBackground from "@/assets/coding-background.jpg"
+import { Button } from "@/components/ui/button"
+import { Download } from "lucide-react"
+import aboutHero from "@/assets/about-hero.jpg"
 
 const AboutPage = () => {
   return (
@@ -11,25 +13,37 @@ const AboutPage = () => {
       <Navigation />
       
       {/* Hero Section for About Page */}
-      <section className="relative min-h-[60vh] w-full flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] w-full flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(${codingBackground})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${aboutHero})`,
           }}
         />
+        
         <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">About Me</h1>
-          <p className="text-xl md:text-2xl opacity-90">
-            Passionate software engineer with expertise in cloud architecture and modern development
+          <h1 className="font-bold mb-6 leading-tight">
+            About <span className="hero-text-gradient">Me</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+            Passionate cloud architect and full-stack developer with 5+ years of experience 
+            building scalable solutions and leading tech communities.
           </p>
+          <Button
+            size="lg"
+            className="px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold transition-all duration-300 hover:scale-105 group"
+            onClick={() => window.open('/Ashenafi_Resume.pdf', '_blank')}
+          >
+            <Download className="mr-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+            Download Resume
+          </Button>
         </div>
       </section>
 
       <main>
         <AboutSection />
-        <CertificationsSection />
         <SkillsSection />
+        <CertificationsSection />
       </main>
       <Footer />
     </div>
