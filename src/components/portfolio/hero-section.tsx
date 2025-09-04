@@ -19,58 +19,50 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 animate-pulse" />
       
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
-        <div className="space-y-8 mb-12">
-          <div className="space-y-6">
-            <div className="text-lg md:text-xl text-blue-200 font-medium tracking-wide uppercase">
-              Cloud Solutions Architect & Full-Stack Developer
-            </div>
-            <h1 className="font-extrabold leading-tight tracking-tight">
-              <span className="block">Transforming Ideas into</span>
-              <span className="block hero-text-gradient">Scalable Solutions</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Specializing in cloud architecture, generative AI, and modern web applications. 
-              Leading innovation as AWS Cloud Captain with 300+ developers.
-            </p>
+      <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
+        <div className="space-y-6 mb-10">
+          <div className="text-sm font-mono text-primary-glow uppercase tracking-wider">
+            // Cloud Architect & Full-Stack Developer
           </div>
+          <h1 className="font-bold leading-tight">
+            <span className="block">Ashenafi Godana</span>
+            <span className="block hero-text-gradient text-2xl md:text-4xl font-normal mt-2">
+              Building scalable cloud solutions
+            </span>
+          </h1>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            AWS Cloud Captain • React • Python • Kubernetes • 5+ years
+          </p>
         </div>
         
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <Button
             size="lg"
-            className="px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow group"
+            className="px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium transition-all duration-200 group"
             onClick={() => navigate('/projects')}
           >
-            View My Work
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="mr-2 h-4 w-4" />
+            View Projects
           </Button>
           <Button
             variant="outline"
             size="lg"
-            className="px-8 py-4 bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 font-semibold transition-all duration-300 backdrop-blur-sm group"
+            className="px-6 py-3 bg-white/10 border border-white/30 text-white hover:bg-white/20 font-medium transition-all duration-200 backdrop-blur-sm"
             onClick={() => window.open('/Ashenafi_Resume.pdf', '_blank')}
           >
-            <Download className="mr-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-            Download Resume
+            Resume
           </Button>
         </div>
         
-        {/* Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/20">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary-glow">300+</div>
-            <div className="text-gray-300">Developers Led</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary-glow">5+</div>
-            <div className="text-gray-300">Years Experience</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary-glow">50+</div>
-            <div className="text-gray-300">Projects Delivered</div>
-          </div>
+        {/* Tech Stack Quick View */}
+        <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-400">
+          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">AWS</span>
+          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">React</span>
+          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">Python</span>
+          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">TypeScript</span>
+          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">Kubernetes</span>
+          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">Docker</span>
         </div>
       </div>
     </section>
