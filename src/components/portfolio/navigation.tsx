@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useNavigate, useLocation } from "react-router-dom"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -62,12 +63,13 @@ export function Navigation() {
               ))}
             </div>
 
-            {/* Right: Contact Button */}
-            <div className="flex items-center space-x-4">
+            {/* Right: Theme Toggle & Contact Button */}
+            <div className="flex items-center space-x-3">
+              <ThemeToggle />
               <Button
                 variant="outline"
                 size="sm"
-                className="hidden sm:flex bg-transparent border-white text-white hover:bg-white hover:text-black transition-all duration-300 uppercase font-medium tracking-wide"
+                className="hidden sm:flex bg-transparent border-white dark:border-white text-white hover:bg-white hover:text-black dark:hover:bg-white dark:hover:text-black transition-all duration-300 uppercase font-medium tracking-wide"
                 onClick={() => navigateToPage('/contact')}
               >
                 CONTACT
@@ -103,14 +105,17 @@ export function Navigation() {
                   {item.name}
                 </button>
               ))}
-              <Button
-                variant="outline"
-                size="sm"
-                className="w-fit mt-4 bg-transparent border-white text-white hover:bg-white hover:text-black"
-                onClick={() => navigateToPage('/contact')}
-              >
-                CONTACT
-              </Button>
+              <div className="flex items-center gap-3 mt-4">
+                <ThemeToggle />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-black"
+                  onClick={() => navigateToPage('/contact')}
+                >
+                  CONTACT
+                </Button>
+              </div>
             </div>
           </div>
         )}
