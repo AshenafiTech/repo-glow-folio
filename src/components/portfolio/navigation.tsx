@@ -42,7 +42,7 @@ export function Navigation() {
           <div className="flex justify-between items-center h-16">
             {/* Left: Logo */}
             <div className="font-bold text-xl text-white cursor-pointer" onClick={() => navigate('/')}>
-              NeuralWin
+              Ashenafi.dev
             </div>
 
             {/* Center: Desktop Navigation */}

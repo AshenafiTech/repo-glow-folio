@@ -11,7 +11,7 @@ export function Footer() {
             © {currentYear} Ashenafi Godana. All rights reserved.
           </div>
           <div className="flex space-x-4">
-            <a href="https://github.com/NeuralWin" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/ashenafig" target="_blank" rel="noopener noreferrer"
                className="text-muted-foreground hover:text-primary transition-colors">
               <Github className="h-5 w-5" />
             </a>
@@ -19,7 +19,7 @@ export function Footer() {
                className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="https://youtube.com/@NeuralWin" target="_blank" rel="noopener noreferrer"
+            <a href="https://youtube.com/@ashenafig" target="_blank" rel="noopener noreferrer"
                className="text-muted-foreground hover:text-primary transition-colors">
               <Youtube className="h-5 w-5" />
             </a>
