@@ -1,18 +1,11 @@
-import { Navigation } from "@/components/portfolio/navigation"
+import { MainLayout } from "@/components/portfolio/main-layout"
 import { HeroSection } from "@/components/portfolio/hero-section"
-import { ServicesSection } from "@/components/portfolio/services-section"
-import { CTASection } from "@/components/portfolio/cta-section"
-import { Footer } from "@/components/portfolio/footer"
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <MainLayout>
       <HeroSection />
-      <ServicesSection />
-      <CTASection />
-      <Footer />
-    </div>
+    </MainLayout>
   );
 };
 

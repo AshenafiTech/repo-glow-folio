@@ -1,70 +1,103 @@
-import { Button } from "@/components/ui/button"
-import { useNavigate } from "react-router-dom"
-import { ArrowRight, Download } from "lucide-react"
-import heroTech from "@/assets/hero-tech.jpg"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Code, Layers, FileText } from "lucide-react"
 
 export function HeroSection() {
-  const navigate = useNavigate()
+  const stats = [
+    { value: "5+", label: "Years of experience", suffix: "" },
+    { value: "50+", label: "Completed projects", suffix: "" },
+    { value: "99%", label: "Client satisfaction", suffix: "" },
+  ]
+
+  const services = [
+    {
+      icon: Code,
+      title: "Full-stack development",
+      description: "Building scalable web applications with modern technologies like React, Python, and cloud infrastructure."
+    },
+    {
+      icon: Layers,
+      title: "Cloud Architecture",
+      description: "Designing and implementing robust cloud solutions using AWS services, containerization, and microservices."
+    },
+    {
+      icon: FileText,
+      title: "Technical Leadership",
+      description: "Leading development teams and mentoring developers while driving technical excellence and best practices."
+    }
+  ]
+
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Tech Background */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${heroTech})`,
-        }}
-      />
-      
-      {/* Animated overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 animate-pulse" />
-      
-      {/* Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
-        <div className="space-y-6 mb-10">
-          <div className="text-sm font-mono text-primary-glow uppercase tracking-wider">
-            // Cloud Architect & Full-Stack Developer
-          </div>
-          <h1 className="font-bold leading-tight">
-            <span className="block">Ashenafi Godana</span>
-            <span className="block hero-text-gradient text-2xl md:text-4xl font-normal mt-2">
-              Building scalable cloud solutions
-            </span>
-          </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            AWS Cloud Captain • React • Python • Kubernetes • 5+ years
+    <div className="p-8 space-y-12">
+      {/* About Me Section */}
+      <section className="space-y-6">
+        <div>
+          <h1 className="text-4xl font-bold text-foreground mb-4">About Me</h1>
+          <p className="text-lg text-muted-foreground mb-6">
+            I'm Ashenafi Godana, a software engineer and cloud architect
+          </p>
+          <p className="text-muted-foreground leading-relaxed max-w-2xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisl ut aliquip ex ea do 
+            eiusmod tempor incididunt commodo consequat.
           </p>
         </div>
-        
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button
-            size="lg"
-            className="px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium transition-all duration-200 group"
-            onClick={() => navigate('/projects')}
-          >
-            <ArrowRight className="mr-2 h-4 w-4" />
-            View Projects
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="px-6 py-3 bg-white/10 border border-white/30 text-white hover:bg-white/20 font-medium transition-all duration-200 backdrop-blur-sm"
-            onClick={() => window.open('/Ashenafi_Resume.pdf', '_blank')}
-          >
-            Resume
-          </Button>
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {stats.map((stat, index) => (
+            <Card key={index} className="bg-card/60 backdrop-blur-sm border border-border hover:border-primary/20 transition-all duration-200">
+              <CardContent className="p-6">
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-foreground">
+                    {stat.value}
+                    <span className="text-primary ml-1">{stat.suffix}</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
-        
-        {/* Tech Stack Quick View */}
-        <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-400">
-          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">AWS</span>
-          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">React</span>
-          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">Python</span>
-          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">TypeScript</span>
-          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">Kubernetes</span>
-          <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">Docker</span>
+      </section>
+
+      {/* Services Section */}
+      <section className="space-y-8">
+        <div className="flex items-center gap-3">
+          <h2 className="text-2xl font-bold text-foreground">My Services</h2>
+          <div className="h-px bg-border flex-1" />
         </div>
-      </div>
-    </section>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <Card key={index} className="bg-card/60 backdrop-blur-sm border border-border hover:border-primary/20 transition-all duration-200 group">
+              <CardContent className="p-6 space-y-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="space-y-6">
+        <h3 className="text-xl font-semibold text-foreground">Tech Stack</h3>
+        <div className="flex flex-wrap gap-2">
+          {["React", "TypeScript", "Python", "AWS", "Docker", "Kubernetes", "Node.js", "PostgreSQL"].map((skill) => (
+            <Badge key={skill} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+              {skill}
+            </Badge>
+          ))}
+        </div>
+      </section>
+    </div>
   )
 }
