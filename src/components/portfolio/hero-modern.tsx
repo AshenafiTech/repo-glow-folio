@@ -2,10 +2,52 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Linkedin, Github, Twitter, Mail } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Linkedin, Github, Twitter, Mail, Download, Award, Code, Cloud, Users } from "lucide-react"
 import profilePhoto from "@/assets/profile-photo.jpg"
 
 export function HeroModern() {
+  const certifications = [
+    "AWS Cloud Practitioner",
+    "Kubernetes Certified",
+    "Azure Fundamentals",
+    "Google Cloud Associate",
+    "Docker Certified"
+  ]
+
+  const skills = [
+    "React", "TypeScript", "Python", "AWS", "Docker", "Kubernetes", 
+    "Node.js", "PostgreSQL", "FastAPI", "Django", "GraphQL", "Redis",
+    "MongoDB", "MySQL", "Jenkins", "GitHub Actions", "Microservices"
+  ]
+
+  const stats = [
+    { value: "5+", label: "Years of experience" },
+    { value: "50+", label: "Completed projects" },
+    { value: "99%", label: "Client satisfaction" },
+  ]
+
+  const featuredProjects = [
+    {
+      title: "Cloud Infrastructure Automation",
+      description: "Automated AWS infrastructure deployment using Terraform and CI/CD pipelines, reducing deployment time by 80%",
+      tech: ["AWS", "Terraform", "Docker", "Jenkins"],
+      image: "/logos/aws.svg"
+    },
+    {
+      title: "Microservices Architecture",
+      description: "Designed and implemented scalable microservices using FastAPI, Docker, and Kubernetes for a fintech platform",
+      tech: ["Python", "FastAPI", "Kubernetes", "PostgreSQL"],
+      image: "/logos/kubernetes.svg"
+    },
+    {
+      title: "Full-Stack E-commerce Platform",
+      description: "Built a complete e-commerce solution with React frontend, Node.js backend, and integrated payment systems",
+      tech: ["React", "Node.js", "MongoDB", "GraphQL"],
+      image: "/logos/react.svg"
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Dotted background pattern */}
@@ -13,7 +55,7 @@ export function HeroModern() {
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '20px 20px'
+          backgroundSize: "20px 20px"
         }}
       />
       
@@ -27,17 +69,33 @@ export function HeroModern() {
           </Avatar>
         </div>
 
-        {/* Brand Name */}
-        <h1 className="text-6xl font-bold text-primary mb-6 tracking-tight">
-          tech5ense
+        {/* Name and Title */}
+        <h1 className="text-6xl font-bold text-primary mb-4 tracking-tight">
+          Ashenafi Godana
         </h1>
+        <h2 className="text-2xl text-foreground mb-6 font-medium">
+          Software Engineer & Cloud Architect
+        </h2>
 
-        {/* Subtitle */}
+        {/* Bio */}
         <p className="text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
           Join me for your weekly dose of cloud onboarding: practical roadmaps, 
           key topic insights, actionable strategies for cloud job preparation, 
-          and free learning resources.
+          and free learning resources. Specializing in full-stack development, 
+          cloud architecture, and technical leadership.
         </p>
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 w-full max-w-2xl">
+          {stats.map((stat, index) => (
+            <Card key={index} className="bg-card/60 backdrop-blur-sm border border-border hover:border-primary/20 transition-all duration-200">
+              <CardContent className="p-6 text-center">
+                <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                <p className="text-sm text-muted-foreground">{stat.label}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
         {/* Email Subscription */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full max-w-md">
@@ -48,6 +106,18 @@ export function HeroModern() {
           />
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
             Subscribe
+          </Button>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex flex-wrap gap-4 mb-8 justify-center">
+          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Download className="w-4 h-4 mr-2" />
+            Download Resume
+          </Button>
+          <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+            <Mail className="w-4 h-4 mr-2" />
+            Contact Me
           </Button>
         </div>
 
@@ -67,49 +137,59 @@ export function HeroModern() {
           </div>
         </div>
 
-        {/* Featured Posts Section */}
+        {/* Tech Stack */}
+        <div className="mb-12 w-full max-w-4xl">
+          <h3 className="text-xl font-semibold text-foreground mb-4">Tech Stack</h3>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {skills.map((skill) => (
+              <Badge key={skill} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        {/* Certifications */}
+        <div className="mb-12 w-full max-w-4xl">
+          <h3 className="text-xl font-semibold text-foreground mb-4">
+            <Award className="w-5 h-5 inline mr-2" />
+            Certifications
+          </h3>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {certifications.map((cert) => (
+              <Badge key={cert} variant="outline" className="border-primary/30 text-foreground">
+                {cert}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        {/* Featured Projects Section */}
         <div className="w-full max-w-6xl">
-          <h2 className="text-2xl font-bold text-foreground mb-8">Featured Posts</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-8">Featured Projects</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Kubernetes Deployment Strategies Explained",
-                description: "Use cases, trade-offs, and answers to real interview scenarios",
-                date: "Jul 31, 2025",
-                likes: 2,
-                image: "https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/50ef9858-8dcb-49de-a4fb-51bfedb508c8/K8s_deployment.gif"
-              },
-              {
-                title: "Cloud Engineer Roadmap",
-                description: "How to start, what to learn, and the resources to help you build real-world cloud skills",
-                date: "Jun 19, 2025",
-                likes: 4,
-                image: "https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/65f520e7-4283-4cc3-8d3e-5c27558f1aad/engineer_roadmap.gif"
-              },
-              {
-                title: "3 Skills that's working insanely well in Cloud/DevOps",
-                description: "|| SPECIAL EDITION ||",
-                date: "Aug 03, 2025",
-                likes: 2,
-                image: "https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/0c8a4d4d-7b3a-4c3a-8c7e-1b2c3d4e5f6g/cloud_devops.gif"
-              }
-            ].map((post, index) => (
-              <div key={index} className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/30 transition-all duration-200 group">
-                <div className="aspect-video bg-muted relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
-                  <div className="absolute bottom-4 left-4 text-xs text-muted-foreground">
-                    {post.date} • ♥ {post.likes}
+            {featuredProjects.map((project, index) => (
+              <Card key={index} className="bg-card border border-border hover:border-primary/30 transition-all duration-200 group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Code className="h-6 w-6 text-primary" />
                   </div>
-                </div>
-                
-                <div className="p-6">
+                  
                   <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {post.title}
+                    {project.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    {post.description}
+                    {project.description}
                   </p>
+                  
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {project.tech.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs bg-muted/50">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
                   
                   <div className="flex items-center gap-3">
                     <Avatar className="w-6 h-6">
@@ -118,8 +198,8 @@ export function HeroModern() {
                     </Avatar>
                     <span className="text-sm text-muted-foreground">Ashenafi Godana</span>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
