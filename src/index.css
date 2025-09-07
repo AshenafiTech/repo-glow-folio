@@ -8,140 +8,92 @@
 
 @layer base {
   :root {
-    /* Professional Colors */
-    --background: 0 0% 98%;
-    --foreground: 240 10% 15%;
+    /* Dark theme like tech5ense - Default to dark */
+    --background: 210 25% 8%;
+    --foreground: 210 10% 92%;
     
-    /* Professional Blue Primary */
-    --primary: 214 84% 56%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 214 84% 66%;
-    --primary-dark: 214 84% 46%;
+    /* Card */
+    --card: 210 25% 10%;
+    --card-foreground: 210 10% 92%;
     
-    /* Neutral Secondary */
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 240 10% 15%;
-    --secondary-glow: 220 14% 90%;
+    /* Popover */
+    --popover: 210 25% 10%;
+    --popover-foreground: 210 10% 92%;
     
-    /* Card System */
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
-    --card-border: 220 13% 91%;
+    /* Primary - Green accent like tech5ense */
+    --primary: 158 64% 52%;
+    --primary-foreground: 210 25% 8%;
     
-    /* Interactive Elements */
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    /* Secondary */
+    --secondary: 210 20% 15%;
+    --secondary-foreground: 210 10% 92%;
     
-    /* UI States */
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    /* Muted */
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 10% 65%;
     
-    --accent: 142 76% 36%;
-    --accent-foreground: 0 0% 98%;
-    --accent-glow: 142 76% 46%;
+    /* Accent */
+    --accent: 158 64% 52%;
+    --accent-foreground: 210 25% 8%;
     
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 10% 92%;
     
-    /* Form Elements */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 214 84% 56%;
+    /* Border */
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 158 64% 52%;
     
-    /* Professional Gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(214 84% 56%), hsl(142 76% 36%));
-    --card-gradient: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
-    --skill-gradient: linear-gradient(90deg, hsl(214 84% 56%), hsl(214 84% 66%));
-    --social-gradient: linear-gradient(45deg, hsl(214 84% 56%), hsl(142 76% 36%));
+    /* Chart colors */
+    --chart-1: 158 64% 52%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
     
-    /* Subtle Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
-    --shadow-glow: 0 0 20px hsl(214 84% 66% / 0.2);
-    --shadow-vibrant: 0 8px 25px -8px hsl(214 84% 56% / 0.2);
-    --shadow-elegant: 0 4px 20px -4px hsl(214 84% 56% / 0.15);
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0.75rem;
+    
+    /* Sidebar */
+    --sidebar-background: 210 25% 8%;
+    --sidebar-foreground: 210 10% 92%;
+    --sidebar-primary: 158 64% 52%;
+    --sidebar-primary-foreground: 210 25% 8%;
+    --sidebar-accent: 210 20% 15%;
+    --sidebar-accent-foreground: 210 10% 92%;
+    --sidebar-border: 210 20% 20%;
+    --sidebar-ring: 158 64% 52%;
   }
 
   .dark {
-    /* Professional Dark Theme */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    
-    /* Professional Dark Primary */
-    --primary: 214 84% 66%;
-    --primary-foreground: 240 10% 3.9%;
-    --primary-glow: 214 84% 76%;
-    --primary-dark: 214 84% 56%;
-    
-    /* Dark Cards */
-    --card: 240 10% 5.9%;
-    --card-foreground: 0 0% 98%;
-    --card-border: 240 3.7% 15.9%;
-    
-    /* Dark Interactive */
-    --popover: 240 10% 5.9%;
-    --popover-foreground: 0 0% 98%;
-    
-    /* Dark UI States */
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --secondary-glow: 240 3.7% 25.9%;
-    
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    
-    --accent: 142 76% 46%;
-    --accent-foreground: 240 10% 3.9%;
-    --accent-glow: 142 76% 56%;
-    
+    /* Same as root since we default to dark */
+    --background: 210 25% 8%;
+    --foreground: 210 10% 92%;
+    --card: 210 25% 10%;
+    --card-foreground: 210 10% 92%;
+    --popover: 210 25% 10%;
+    --popover-foreground: 210 10% 92%;
+    --primary: 158 64% 52%;
+    --primary-foreground: 210 25% 8%;
+    --secondary: 210 20% 15%;
+    --secondary-foreground: 210 10% 92%;
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 10% 65%;
+    --accent: 158 64% 52%;
+    --accent-foreground: 210 25% 8%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    
-    /* Dark Form Elements */
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 214 84% 66%;
-    
-    /* Professional Dark Gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(214 84% 66%), hsl(142 76% 46%));
-    --card-gradient: linear-gradient(145deg, hsl(240 10% 5.9%), hsl(240 3.7% 8.9%));
-    --skill-gradient: linear-gradient(90deg, hsl(214 84% 66%), hsl(214 84% 76%));
-    --social-gradient: linear-gradient(45deg, hsl(214 84% 66%), hsl(142 76% 46%));
-    
-    /* Subtle Dark Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 20px hsl(214 84% 76% / 0.3);
-    --shadow-vibrant: 0 8px 25px -8px hsl(214 84% 66% / 0.3);
-    --shadow-elegant: 0 4px 20px -4px hsl(214 84% 66% / 0.25);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: 210 10% 92%;
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 158 64% 52%;
+    --sidebar-background: 210 25% 8%;
+    --sidebar-foreground: 210 10% 92%;
+    --sidebar-primary: 158 64% 52%;
+    --sidebar-primary-foreground: 210 25% 8%;
+    --sidebar-accent: 210 20% 15%;
+    --sidebar-accent-foreground: 210 10% 92%;
+    --sidebar-border: 210 20% 20%;
+    --sidebar-ring: 158 64% 52%;
   }
 }
 

@@ -1,11 +1,8 @@
-import { MainLayout } from "@/components/portfolio/main-layout"
-import { HeroSection } from "@/components/portfolio/hero-section"
+import { HeroModern } from "@/components/portfolio/hero-modern"
 
 const HomePage = () => {
   return (
-    <MainLayout>
-      <HeroSection />
-    </MainLayout>
+    <HeroModern />
   );
 };
 
